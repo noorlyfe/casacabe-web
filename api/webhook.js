@@ -4,20 +4,67 @@ import { Resend } from 'resend';
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-function generateLicenseKey() {
-  const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
-  const segments = [];
-  const random = new Uint8Array(16);
-  crypto.getRandomValues(random);
-  let i = 0;
-  for (let s = 0; s < 4; s++) {
-    let segment = '';
-    for (let j = 0; j < 4; j++) {
-      segment += chars[random[i++] % chars.length];
-    }
-    segments.push(segment);
+const CHARSET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+const BODY_LENGTH = 14;
+const CHECK_LENGTH = 2;
+
+function normalizeLicenseKey(key) {
+  return String(key || '')
+    .replace(/-/g, '')
+    .toUpperCase()
+    .replace(/[^A-Z0-9]/g, '');
+}
+
+function formatLicenseKey(raw16) {
+  const clean = normalizeLicenseKey(raw16);
+  if (clean.length !== 16) return clean;
+  return `${clean.slice(0, 4)}-${clean.slice(4, 8)}-${clean.slice(8, 12)}-${clean.slice(12, 16)}`;
+}
+
+function charIndex(char) {
+  return CHARSET.indexOf(char);
+}
+
+function checksumForBody(body14) {
+  let sum = 0;
+  for (let i = 0; i < body14.length; i += 1) {
+    const idx = charIndex(body14[i]);
+    if (idx < 0) return null;
+    sum = (sum + idx * (i + 3)) % 1024;
   }
-  return segments.join('-');
+
+  const reversed = body14.split('').reverse().join('');
+  let revSum = 0;
+  for (let i = 0; i < reversed.length; i += 1) {
+    const idx = charIndex(reversed[i]);
+    if (idx < 0) return null;
+    revSum = (revSum + idx * (i + 7)) % 1024;
+  }
+
+  const c1 = sum % CHARSET.length;
+  const c2 = (revSum + sum) % CHARSET.length;
+  return CHARSET[c1] + CHARSET[c2];
+}
+
+function randomCharIndex() {
+  const random = new Uint8Array(1);
+  const max = 256 - (256 % CHARSET.length);
+  let value;
+  do {
+    crypto.getRandomValues(random);
+    value = random[0];
+  } while (value >= max);
+  return value % CHARSET.length;
+}
+
+function generateLicenseKey() {
+  const bodyChars = [];
+  for (let i = 0; i < BODY_LENGTH; i += 1) {
+    bodyChars.push(CHARSET[randomCharIndex()]);
+  }
+  const body = bodyChars.join('');
+  const check = checksumForBody(body);
+  return formatLicenseKey(body + check);
 }
 
 export default async function handler(req) {
