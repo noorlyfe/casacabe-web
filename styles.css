@@ -1,4 +1,4 @@
-/* Casacabe — Premium indie marketing site (Linear / Vercel / Stripe) */
+/* Casacabe | Premium indie marketing site (Linear / Vercel / Stripe) */
 
 :root {
   --font: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
@@ -334,12 +334,37 @@ img {
 }
 
 .hero-layout {
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 56px;
-  align-items: center;
+  display: block;
   position: relative;
   z-index: 1;
+}
+
+.hero-layout.hero-centered {
+  text-align: center;
+}
+
+.hero-layout.hero-centered .hero-copy {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-layout.hero-centered .hero-copy .hero-eyebrow,
+.hero-layout.hero-centered .hero-copy .hero-headline,
+.hero-layout.hero-centered .hero-copy .hero-subheadline {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-layout.hero-centered .hero-copy .hero-actions,
+.hero-layout.hero-centered .hero-copy .trust-strip {
+  justify-content: center;
+}
+
+.hero-layout.hero-centered .hero-visual {
+  margin-top: 56px;
+  min-height: auto;
 }
 
 .hero-centered,
@@ -400,7 +425,7 @@ img {
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--accent);
 }
 
 .hero-copy .hero-eyebrow,
@@ -798,7 +823,7 @@ img {
   gap: 56px;
 }
 
-.preview-layout:nth-of-type(even) {
+.preview-section:nth-of-type(even) .preview-layout {
   flex-direction: row-reverse;
 }
 
@@ -1246,7 +1271,7 @@ img {
 }
 
 .home-pricing-card {
-  max-width: 720px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 48px 40px 40px;
   background: var(--bg);
@@ -1263,9 +1288,9 @@ img {
   padding: 6px 14px;
   font-size: 12px;
   font-weight: 600;
-  color: var(--text-muted);
-  background: var(--card-bg);
-  border: 1px solid var(--border);
+  color: var(--accent);
+  background: rgba(22, 163, 74, 0.08);
+  border: 1px solid rgba(22, 163, 74, 0.2);
   border-radius: 100px;
 }
 
@@ -1405,9 +1430,35 @@ img {
 .footer-top {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
+  align-items: start;
   gap: 24px;
   margin-bottom: 32px;
+}
+
+.footer-brand .footer-tagline {
+  margin-top: 8px;
+}
+
+.footer-links-center {
+  justify-content: center;
+  text-align: center;
+}
+
+.home-beta-tier {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.home-beta-tier .home-beta-label {
+  display: block;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.home-beta-tier .home-beta-price {
+  display: block;
 }
 
 .footer-email {
@@ -2486,7 +2537,7 @@ img {
   }
 
   .preview-layout,
-  .preview-layout:nth-of-type(even) {
+  .preview-section:nth-of-type(even) .preview-layout {
     flex-direction: column;
     gap: 40px;
   }
