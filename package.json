@@ -1,5 +1,9 @@
 {
+  "name": "casacabe-web",
+  "version": "1.0.0",
   "dependencies": {
-    "@vercel/analytics": "^2.0.1"
+    "@vercel/analytics": "^2.0.1",
+    "resend": "^3.0.0",
+    "stripe": "^14.0.0"
   }
 }

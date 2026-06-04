@@ -208,51 +208,6 @@ img {
   margin-left: 0;
 }
 
-.hero-soon {
-  margin-bottom: 28px;
-}
-
-.hero-soon-title {
-  margin: 0 0 20px;
-  font-size: clamp(3.25rem, 11vw, 5.75rem);
-  font-weight: 700;
-  letter-spacing: -0.045em;
-  line-height: 0.95;
-  color: var(--text-primary);
-}
-
-.hero-soon-dots {
-  color: var(--accent);
-  display: inline-block;
-  margin-left: 0.06em;
-  animation: hero-soon-pulse 2.4s ease-in-out infinite;
-}
-
-.hero-soon-lead {
-  margin: 0;
-  max-width: 34rem;
-  font-size: clamp(1.05rem, 2.2vw, 1.2rem);
-  line-height: 1.65;
-  color: var(--text-secondary);
-  font-weight: 400;
-}
-
-@keyframes hero-soon-pulse {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.35;
-  }
-}
-
-.btn-nav-soon {
-  pointer-events: none;
-  cursor: default;
-  opacity: 0.92;
-}
-
 .hero-visual {
   position: relative;
   min-height: 380px;
