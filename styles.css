@@ -468,12 +468,22 @@ img {
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   flex-shrink: 0;
   margin-right: 36px;
   font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1;
+}
+
+.logo-icon {
+  display: block;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
 }
 
 .nav-items {
