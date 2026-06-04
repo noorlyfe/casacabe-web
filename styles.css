@@ -2757,3 +2757,134 @@ img {
     text-align: center;
   }
 }
+
+/* ── Homepage (minimal landing) ── */
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.nav-home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  grid-template-columns: unset;
+}
+
+.nav-end {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-left: auto;
+}
+
+.nav-home .nav-items {
+  justify-content: flex-end;
+  gap: 28px;
+}
+
+.nav-home .nav-items a {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.nav-home .nav-items a:hover {
+  color: var(--text);
+}
+
+.nav-home .btn-nav {
+  margin-left: 0;
+}
+
+.hero-landing {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px var(--container-pad) 64px;
+}
+
+.hero-landing-inner {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-landing .hero-eyebrow {
+  margin: 0 auto 20px;
+}
+
+.hero-landing .hero-headline {
+  margin: 0 auto 24px;
+  max-width: none;
+}
+
+.hero-landing .hero-subheadline {
+  margin: 0 auto 36px;
+  max-width: 520px;
+}
+
+.hero-landing .hero-actions {
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.hero-landing .trust-strip {
+  justify-content: center;
+  max-width: none;
+}
+
+.footer-home {
+  margin-top: auto;
+  padding-top: 48px;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .nav-home {
+    flex-wrap: wrap;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .nav-end {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 16px;
+  }
+
+  .nav-home .nav-items {
+    gap: 20px;
+  }
+
+  .hero-landing {
+    padding-top: 32px;
+    padding-bottom: 48px;
+  }
+
+  .hero-landing .trust-strip {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .hero-landing .trust-strip li {
+    padding-left: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-end {
+    justify-content: space-between;
+  }
+
+  .nav-home .btn-nav {
+    width: 100%;
+  }
+}
