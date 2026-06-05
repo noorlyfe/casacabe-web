@@ -2761,9 +2761,7 @@ img {
 /* ── Homepage (minimal landing) ── */
 
 .home-page {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  background: var(--bg);
 }
 
 .nav-home {
@@ -2800,49 +2798,154 @@ img {
   margin-left: 0;
 }
 
-.hero-landing {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 48px var(--container-pad) 64px;
-}
-
-.hero-landing-inner {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
+.home-hero {
+  padding: 80px var(--container-pad) 100px;
   text-align: center;
 }
 
-.hero-landing .hero-eyebrow {
+.home-hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.home-hero .hero-eyebrow {
   margin: 0 auto 20px;
 }
 
-.hero-landing .hero-headline {
+.home-hero .hero-headline {
   margin: 0 auto 24px;
   max-width: none;
 }
 
-.hero-landing .hero-subheadline {
+.home-hero .hero-subheadline {
   margin: 0 auto 36px;
   max-width: 520px;
 }
 
-.hero-landing .hero-actions {
+.home-hero .hero-actions {
   justify-content: center;
   margin-bottom: 32px;
 }
 
-.hero-landing .trust-strip {
+.home-hero .trust-strip {
   justify-content: center;
   max-width: none;
 }
 
+.home-section-headline {
+  margin: 0 0 48px;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: -0.8px;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--text);
+}
+
+.home-problem {
+  padding: 100px var(--container-pad);
+  border-top: 1px solid var(--border);
+}
+
+.home-problem-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.home-problem-card {
+  padding: 32px 28px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.home-problem-card p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text-body);
+}
+
+.home-features {
+  padding: 100px var(--container-pad);
+  border-top: 1px solid var(--border);
+}
+
+.home-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px 24px;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.home-feature-item {
+  padding: 0;
+}
+
+.home-feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 16px;
+  color: var(--text);
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.home-feature-item h3 {
+  margin: 0 0 8px;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.home-feature-item p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-body);
+}
+
+.home-cta {
+  padding: 100px var(--container-pad);
+  border-top: 1px solid var(--border);
+}
+
+.home-cta-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home-cta .home-section-headline {
+  margin-bottom: 32px;
+}
+
 .footer-home {
-  margin-top: auto;
+  margin-top: 0;
   padding-top: 48px;
   padding-bottom: 40px;
+}
+
+@media (max-width: 900px) {
+  .home-problem-grid,
+  .home-features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .home-features-grid {
+    max-width: 480px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2863,18 +2966,24 @@ img {
     gap: 20px;
   }
 
-  .hero-landing {
-    padding-top: 32px;
-    padding-bottom: 48px;
+  .home-hero {
+    padding: 48px var(--container-pad) 64px;
   }
 
-  .hero-landing .trust-strip {
+  .home-problem,
+  .home-features,
+  .home-cta {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .home-hero .trust-strip {
     flex-direction: column;
     align-items: center;
     gap: 12px;
   }
 
-  .hero-landing .trust-strip li {
+  .home-hero .trust-strip li {
     padding-left: 22px;
   }
 }
@@ -2885,6 +2994,15 @@ img {
   }
 
   .nav-home .btn-nav {
+    width: 100%;
+  }
+
+  .home-hero .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .home-hero .hero-actions .btn {
     width: 100%;
   }
 }
