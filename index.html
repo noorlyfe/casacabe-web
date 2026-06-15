@@ -38,23 +38,32 @@
   <link rel="stylesheet" href="styles.css">
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
-<body class="home-page">
-  <header class="site-header">
-    <nav class="nav nav-home" aria-label="Main">
+<body>
+  <div class="site-header">
+    <nav class="nav">
       <a href="index.html" class="logo">
         <img src="logo.svg" alt="" class="logo-icon" width="28" height="28">
         <span>Casacabe</span>
       </a>
-      <div class="nav-end">
-        <div class="nav-items">
-          <a href="features.html">Features</a>
-          <a href="pricing.html">Pricing</a>
-          <a href="faq.html">FAQ</a>
+      <div class="nav-items">
+        <div class="nav-dropdown nav-keep">
+          <span class="nav-dropdown-trigger" tabindex="0">Product <span class="nav-dropdown-caret">▾</span></span>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="product/try-before-you-buy.html" role="menuitem">Try it before you buy</a>
+            <a href="product/app-tour.html" role="menuitem">App tour</a>
+            <a href="product/overview.html" role="menuitem">Overview</a>
+            <a href="product/requirements.html" role="menuitem">System requirements</a>
+          </div>
         </div>
-        <a href="https://buy.stripe.com/00w00c04Ee2j4gI1L05ZC02" class="btn btn-primary btn-nav">Buy Casacabe $199</a>
+        <a href="features.html" class="nav-keep">Features</a>
+        <a href="how-it-works.html" class="nav-keep">How it works</a>
+        <a href="about.html" class="nav-keep">About</a>
+        <a href="pricing.html" class="nav-keep">Pricing</a>
+        <a href="faq.html" class="nav-keep">FAQ</a>
       </div>
+      <a href="https://buy.stripe.com/00w00c04Ee2j4gI1L05ZC02" class="btn btn-primary btn-nav">Buy Casacabe $199</a>
     </nav>
-  </header>
+  </div>
 
   <main>
     <section class="home-hero">
@@ -63,7 +72,7 @@
         <h1 class="hero-headline">Your restaurant. Your numbers. Finally in one place.</h1>
         <p class="hero-subheadline">Casacabe runs on your Mac or PC. Your data never leaves your computer.</p>
         <div class="hero-actions">
-          <a href="pricing.html#beta" class="btn btn-primary">Download Free Trial</a>
+          <a href="pricing.html#beta" class="btn btn-primary">Join the Beta</a>
           <a href="features.html" class="btn btn-outline">See Features</a>
         </div>
         <ul class="trust-strip" aria-label="Key benefits">
@@ -71,10 +80,61 @@
           <li>Mac and Windows</li>
           <li>Data stays with you</li>
         </ul>
+        <div class="home-hero-visual" aria-hidden="true">
+          <div class="dash-window hero-preview-frame">
+            <div class="dash-titlebar">
+              <span class="dash-dot dash-dot-red"></span>
+              <span class="dash-dot dash-dot-yellow"></span>
+              <span class="dash-dot dash-dot-green"></span>
+              <span class="dash-title">Casacabe Dashboard</span>
+            </div>
+            <div class="dash-body">
+              <div class="dash-kpis">
+                <div class="dash-kpi">
+                  <span class="dash-kpi-label">Revenue</span>
+                  <span class="dash-kpi-value">$48,290</span>
+                  <span class="dash-kpi-delta dash-kpi-up">+8.2% vs last month</span>
+                </div>
+                <div class="dash-kpi">
+                  <span class="dash-kpi-label">Labor</span>
+                  <span class="dash-kpi-value">27.8%</span>
+                  <span class="dash-kpi-delta dash-kpi-ok">On target</span>
+                </div>
+                <div class="dash-kpi">
+                  <span class="dash-kpi-label">Prime cost</span>
+                  <span class="dash-kpi-value">58.4%</span>
+                  <span class="dash-kpi-delta dash-kpi-ok">Within range</span>
+                </div>
+              </div>
+              <div class="dash-chart">
+                <span class="dash-chart-label">Weekly revenue</span>
+                <div class="dash-chart-bars is-animated">
+                  <div class="dash-bar" style="--h: 45%"></div>
+                  <div class="dash-bar" style="--h: 62%"></div>
+                  <div class="dash-bar" style="--h: 55%"></div>
+                  <div class="dash-bar" style="--h: 78%"></div>
+                  <div class="dash-bar dash-bar-accent" style="--h: 92%"></div>
+                  <div class="dash-bar" style="--h: 70%"></div>
+                  <div class="dash-bar" style="--h: 85%"></div>
+                </div>
+              </div>
+              <div class="dash-row">
+                <div class="dash-mini">
+                  <span class="dash-mini-label">Food cost</span>
+                  <div class="dash-progress"><div class="dash-progress-fill" style="--w: 31%"></div></div>
+                </div>
+                <div class="dash-mini">
+                  <span class="dash-mini-label">Invoices due</span>
+                  <div class="dash-progress"><div class="dash-progress-fill" style="--w: 42%"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="home-problem">
+    <section class="home-problem reveal">
       <div class="container">
         <h2 class="home-section-headline">Sound familiar?</h2>
         <div class="home-problem-grid">
@@ -91,7 +151,7 @@
       </div>
     </section>
 
-    <section class="home-features">
+    <section class="home-features reveal">
       <div class="container">
         <h2 class="home-section-headline">Everything in one place</h2>
         <div class="home-features-grid">
@@ -141,7 +201,7 @@
       </div>
     </section>
 
-    <section class="home-cta">
+    <section class="home-cta reveal">
       <div class="container home-cta-inner">
         <h2 class="home-section-headline">Ready to get started?</h2>
         <a href="pricing.html" class="btn btn-primary">See Pricing</a>
@@ -149,7 +209,7 @@
     </section>
   </main>
 
-  <footer class="footer footer-home">
+  <footer class="section footer">
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
@@ -158,6 +218,8 @@
         </div>
         <nav class="footer-links footer-links-center" aria-label="Footer">
           <a href="features.html">Features</a>
+          <span class="footer-sep">·</span>
+          <a href="how-it-works.html">How it works</a>
           <span class="footer-sep">·</span>
           <a href="pricing.html">Pricing</a>
           <span class="footer-sep">·</span>
@@ -172,5 +234,6 @@
       <p class="footer-copy">© 2026 Casacabe. All rights reserved.</p>
     </div>
   </footer>
+  <script src="animations.js"></script>
 </body>
 </html>
