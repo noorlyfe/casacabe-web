@@ -1,12 +1,66 @@
+/**
+ * Stripe webhook — sends a license key email on checkout.session.completed.
+ *
+ * Live (default): STRIPE_MODE=live or unset
+ *   STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET
+ *
+ * Test: STRIPE_MODE=test
+ *   STRIPE_SECRET_KEY_TEST, STRIPE_WEBHOOK_SECRET_TEST
+ *   STRIPE_PAYMENT_LINK_TEST — Payment Link created in Dashboard with Test mode on
+ *
+ * Resend (RESEND_API_KEY) is shared by both modes; email delivery is not Stripe-specific.
+ *
+ * To test end-to-end:
+ * 1. Set STRIPE_MODE=test on a preview/local deployment (keep production on live).
+ * 2. In Stripe Dashboard (Test mode), add webhook → checkout.session.completed → your /api/webhook URL.
+ * 3. Checkout via STRIPE_PAYMENT_LINK_TEST (not the live buy link on the site).
+ * 4. Pay with test card 4242 4242 4242 4242, any future expiry, any CVC, any ZIP.
+ * 5. Webhook verifies with STRIPE_WEBHOOK_SECRET_TEST, generates a license key, Resend emails it.
+ */
 import Stripe from 'stripe';
 import { Resend } from 'resend';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const CHARSET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 const BODY_LENGTH = 14;
 const CHECK_LENGTH = 2;
+
+let stripeClient = null;
+let stripeClientMode = null;
+
+function stripeMode() {
+  const mode = String(process.env.STRIPE_MODE || 'live').toLowerCase();
+  return mode === 'test' ? 'test' : 'live';
+}
+
+function stripeCredentials() {
+  const mode = stripeMode();
+  if (mode === 'test') {
+    return {
+      mode,
+      secretKey: process.env.STRIPE_SECRET_KEY_TEST,
+      webhookSecret: process.env.STRIPE_WEBHOOK_SECRET_TEST,
+    };
+  }
+  return {
+    mode,
+    secretKey: process.env.STRIPE_SECRET_KEY,
+    webhookSecret: process.env.STRIPE_WEBHOOK_SECRET,
+  };
+}
+
+function getStripe() {
+  const { mode, secretKey } = stripeCredentials();
+  if (!secretKey) {
+    throw new Error(`Missing Stripe secret key for ${mode} mode`);
+  }
+  if (!stripeClient || stripeClientMode !== mode) {
+    stripeClient = new Stripe(secretKey);
+    stripeClientMode = mode;
+  }
+  return stripeClient;
+}
 
 function normalizeLicenseKey(key) {
   return String(key || '')
@@ -72,16 +126,18 @@ export default async function handler(req) {
     return new Response('Method not allowed', { status: 405 });
   }
 
+  const { mode, webhookSecret } = stripeCredentials();
+  if (!webhookSecret) {
+    return new Response(`Webhook secret not configured for ${mode} mode`, { status: 500 });
+  }
+
   const body = await req.text();
   const sig = req.headers.get('stripe-signature');
 
   let event;
   try {
-    event = await stripe.webhooks.constructEventAsync(
-      body,
-      sig,
-      process.env.STRIPE_WEBHOOK_SECRET
-    );
+    const stripe = getStripe();
+    event = await stripe.webhooks.constructEventAsync(body, sig, webhookSecret);
   } catch {
     return new Response('Webhook error', { status: 400 });
   }
@@ -95,12 +151,13 @@ export default async function handler(req) {
 
     const name = session.customer_details?.name || 'there';
     const licenseKey = generateLicenseKey();
+    const subjectPrefix = mode === 'test' ? '[TEST] ' : '';
 
     try {
       await resend.emails.send({
         from: 'Casacabe <support@casacabe.com>',
         to: email,
-        subject: 'Your Casacabe License Key',
+        subject: `${subjectPrefix}Your Casacabe License Key`,
         html: `
         <div style="font-family: -apple-system, sans-serif; max-width: 600px; margin: 0 auto; padding: 40px 20px;">
           <h1 style="font-size: 24px; color: #111;">Welcome to Casacabe, ${name}!</h1>
