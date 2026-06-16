@@ -76,7 +76,7 @@
           <a href="features.html" class="btn btn-outline">See Features</a>
         </div>
         <div class="home-hero-showcase">
-          <div class="home-hero-visual" aria-hidden="true">
+          <div class="home-hero-visual ui-float" aria-hidden="true">
             <div class="dash-window hero-preview-frame">
             <div class="dash-titlebar">
               <span class="dash-dot dash-dot-red"></span>
@@ -88,21 +88,21 @@
               <div class="dash-kpis">
                 <div class="dash-kpi">
                   <span class="dash-kpi-label">Total revenue</span>
-                  <span class="dash-kpi-value">$34,443</span>
+                  <span class="dash-kpi-value" data-count="34443" data-format="currency">$0</span>
                 </div>
                 <div class="dash-kpi">
                   <span class="dash-kpi-label">Net profit</span>
-                  <span class="dash-kpi-value">$28,789</span>
+                  <span class="dash-kpi-value" data-count="28789" data-format="currency">$0</span>
                   <span class="dash-kpi-delta dash-kpi-up">83.6% margin</span>
                 </div>
                 <div class="dash-kpi">
                   <span class="dash-kpi-label">Prime cost</span>
-                  <span class="dash-kpi-value">16.4%</span>
+                  <span class="dash-kpi-value" data-count="16.4" data-suffix="%">0%</span>
                 </div>
               </div>
               <div class="dash-chart">
                 <span class="dash-chart-label">Monthly revenue</span>
-                <div class="dash-chart-bars is-animated">
+                <div class="dash-chart-bars">
                   <div class="dash-bar" style="--h: 52%"></div>
                   <div class="dash-bar" style="--h: 61%"></div>
                   <div class="dash-bar" style="--h: 58%"></div>
@@ -124,8 +124,36 @@
             </div>
           </div>
           </div>
-          <div class="home-photo home-photo-hero">
-            <img src="https://picsum.photos/id/60/800/500" alt="Laptop on a desk showing business data on screen" width="800" height="500" loading="lazy">
+          <div class="home-hero-side ui-float ui-float-delay" aria-hidden="true">
+            <div class="dash-window dash-window-compact">
+              <div class="dash-titlebar">
+                <span class="dash-dot dash-dot-red"></span>
+                <span class="dash-dot dash-dot-yellow"></span>
+                <span class="dash-dot dash-dot-green"></span>
+                <span class="dash-title">Recent activity</span>
+              </div>
+              <div class="dash-body">
+                <ul class="dash-activity">
+                  <li><span class="dash-activity-text">Sales entry added</span><span class="dash-activity-time">2m ago</span></li>
+                  <li><span class="dash-activity-text">Invoice marked paid</span><span class="dash-activity-time">1h ago</span></li>
+                  <li><span class="dash-activity-text">Expense logged · COGS</span><span class="dash-activity-time">3h ago</span></li>
+                  <li><span class="dash-activity-text">P&amp;L report exported</span><span class="dash-activity-time">Yesterday</span></li>
+                </ul>
+                <div class="dash-sparkline-wrap">
+                  <span class="dash-chart-label">Weekly trend</span>
+                  <svg class="dash-sparkline" viewBox="0 0 120 36" preserveAspectRatio="none" aria-hidden="true">
+                    <path class="dash-sparkline-path" d="M0 28 L20 22 L40 24 L60 18 L80 20 L100 12 L120 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="dash-window dash-window-mini ui-float-slow">
+              <div class="dash-body dash-body-tight">
+                <span class="dash-kpi-label">Unpaid invoices</span>
+                <span class="dash-kpi-value dash-kpi-value-sm" data-count="4210" data-format="currency">$0</span>
+                <div class="dash-progress dash-progress-mt"><div class="dash-progress-fill" style="--w: 68%"></div></div>
+              </div>
+            </div>
           </div>
         </div>
         <ul class="trust-strip home-hero-trust" aria-label="Key benefits">
@@ -151,8 +179,17 @@
               <p>You pay over $500 a month for software that still does not talk to each other.</p>
             </article>
           </div>
-          <div class="home-photo home-photo-problem">
-            <img src="https://picsum.photos/id/366/600/400" alt="Stack of receipts and paperwork on a desk" width="600" height="400" loading="lazy">
+          <div class="home-problem-visual" aria-hidden="true">
+            <div class="problem-chart-card">
+              <span class="problem-chart-label">Profit visibility</span>
+              <svg class="problem-chart" viewBox="0 0 280 120" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                <line x1="24" y1="96" x2="256" y2="96" stroke="#e5e7eb" stroke-width="1"/>
+                <line x1="24" y1="24" x2="24" y2="96" stroke="#e5e7eb" stroke-width="1"/>
+                <path class="problem-chart-line" d="M24 32 L72 38 L120 52 L168 68 L216 82 L256 90" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+                <path class="problem-chart-line problem-chart-line-muted" d="M24 48 L72 50 L120 54 L168 60 L216 72 L256 78" fill="none" stroke="#9ca3af" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4"/>
+              </svg>
+              <p class="problem-chart-caption">Numbers scattered across tools. No single source of truth.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -162,8 +199,49 @@
       <div class="container">
         <h2 class="home-section-headline">Everything in one place</h2>
         <div class="home-features-layout">
-          <div class="home-photo home-photo-features">
-            <img src="https://picsum.photos/id/0/800/500" alt="Laptop showing charts and business data" width="800" height="500" loading="lazy">
+          <div class="home-features-visual" aria-hidden="true">
+            <div class="ui-collage">
+              <div class="dash-window dash-window-collage ui-collage-panel ui-collage-panel-1">
+                <div class="dash-titlebar">
+                  <span class="dash-dot dash-dot-red"></span>
+                  <span class="dash-dot dash-dot-yellow"></span>
+                  <span class="dash-dot dash-dot-green"></span>
+                  <span class="dash-title">P&amp;L · June</span>
+                </div>
+                <div class="dash-body dash-body-tight">
+                  <table class="dash-table">
+                    <tr><td>Revenue</td><td data-count="34443" data-format="currency">$0</td></tr>
+                    <tr><td>COGS</td><td>$5,654</td></tr>
+                    <tr><td>Labor</td><td>$4,210</td></tr>
+                    <tr class="dash-table-total"><td>Net profit</td><td data-count="28789" data-format="currency">$0</td></tr>
+                  </table>
+                </div>
+              </div>
+              <div class="dash-window dash-window-collage ui-collage-panel ui-collage-panel-2">
+                <div class="dash-body dash-body-tight">
+                  <span class="dash-chart-label">Expenses by group</span>
+                  <div class="dash-chart-bars dash-chart-bars-sm">
+                    <div class="dash-bar" style="--h: 72%"></div>
+                    <div class="dash-bar" style="--h: 48%"></div>
+                    <div class="dash-bar dash-bar-accent" style="--h: 56%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="dash-window dash-window-collage ui-collage-panel ui-collage-panel-3">
+                <div class="dash-body dash-body-tight">
+                  <div class="dash-kpis dash-kpis-inline">
+                    <div class="dash-kpi dash-kpi-compact">
+                      <span class="dash-kpi-label">Food cost</span>
+                      <span class="dash-kpi-value dash-kpi-value-sm">31%</span>
+                    </div>
+                    <div class="dash-kpi dash-kpi-compact">
+                      <span class="dash-kpi-label">Labor</span>
+                      <span class="dash-kpi-value dash-kpi-value-sm">28%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="home-features-grid">
           <article class="home-feature-item">
@@ -215,8 +293,10 @@
     </section>
 
     <section class="home-cta reveal">
-      <div class="home-photo home-photo-cta">
-        <img src="https://picsum.photos/id/180/1200/400" alt="Desk with laptop and paperwork for back-office admin work" width="1200" height="400" loading="lazy">
+      <div class="home-cta-bg" aria-hidden="true">
+        <span class="cta-blob cta-blob-1"></span>
+        <span class="cta-blob cta-blob-2"></span>
+        <span class="cta-blob cta-blob-3"></span>
       </div>
       <div class="container home-cta-inner">
         <h2 class="home-section-headline">Ready to get started?</h2>
