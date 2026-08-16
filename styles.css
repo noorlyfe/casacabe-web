@@ -3324,8 +3324,8 @@ img {
   border-top: none;
   overflow: hidden;
   background:
-    radial-gradient(700px 240px at 20% 0%, rgba(201, 162, 39, 0.22), transparent 55%),
-    radial-gradient(600px 220px at 90% 80%, rgba(14, 138, 107, 0.28), transparent 50%),
+    radial-gradient(700px 240px at 20% 0%, rgba(14, 138, 107, 0.28), transparent 55%),
+    radial-gradient(600px 220px at 90% 80%, rgba(14, 138, 107, 0.18), transparent 50%),
     var(--bg-deep);
   color: #fff;
 }
@@ -3347,7 +3347,7 @@ img {
   border-radius: 50%;
   filter: blur(60px);
   opacity: 0.35;
-  background: var(--gold);
+  background: var(--accent);
   animation: cta-blob-drift 12s ease-in-out infinite;
 }
 
@@ -5105,15 +5105,15 @@ img {
 }
 
 .home-cta .btn-primary {
-  background: var(--gold);
-  border-color: var(--gold);
-  color: var(--text);
-  box-shadow: 0 8px 20px rgba(201, 162, 39, 0.28);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(14, 138, 107, 0.28);
 }
 
 .home-cta .btn-primary:hover {
-  background: #d4ad3a;
-  border-color: #d4ad3a;
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
 }
 
 .home-cta-actions {
