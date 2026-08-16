@@ -9,7 +9,33 @@
   <meta name="keywords" content="restaurant backoffice software overview, desktop restaurant app, independent restaurant accounting">
   <link rel="canonical" href="https://casacabe.com/product/overview.html">
   <title>Product Overview | Casacabe Restaurant Backoffice Software</title>
-  <script>(function(){try{if(localStorage.getItem('casacabe-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+  <script>
+(function(){
+  if (window.__casacabeTheme) return;
+  var root = document.documentElement;
+  var key = "casacabe-theme";
+  function current(){ return root.getAttribute("data-theme") === "dark" ? "dark" : "light"; }
+  function apply(theme){
+    if (theme === "dark") root.setAttribute("data-theme", "dark");
+    else root.removeAttribute("data-theme");
+    try { localStorage.setItem(key, theme); } catch (e) {}
+    var dark = theme === "dark";
+    document.querySelectorAll("[data-theme-toggle]").forEach(function(btn){
+      btn.setAttribute("aria-pressed", dark ? "true" : "false");
+      btn.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+    });
+  }
+  function toggle(){ apply(current() === "dark" ? "light" : "dark"); }
+  try { if (localStorage.getItem(key) === "dark") apply("dark"); } catch (e) {}
+  document.addEventListener("click", function(event){
+    var btn = event.target.closest && event.target.closest("[data-theme-toggle]");
+    if (!btn) return;
+    event.preventDefault();
+    toggle();
+  });
+  window.__casacabeTheme = { apply: apply, toggle: toggle };
+})();
+</script>
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>

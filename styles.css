@@ -46,7 +46,7 @@
   --radius-paper: 6px;
 }
 
-[data-theme="dark"] {
+html[data-theme="dark"] {
   color-scheme: dark;
   --bg: #1e3f34;
   --bg-warm: #18352c;
@@ -237,6 +237,8 @@ img {
 }
 
 .theme-toggle {
+  position: relative;
+  z-index: 2;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -248,6 +250,7 @@ img {
   background: transparent;
   color: var(--text);
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .theme-toggle:hover {
@@ -261,7 +264,7 @@ img {
 }
 
 html:not([data-theme="dark"]) .theme-toggle .theme-icon-moon { display: block; }
-[data-theme="dark"] .theme-toggle .theme-icon-sun { display: block; }
+html[data-theme="dark"] .theme-toggle .theme-icon-sun { display: block; }
 
 .btn-block {
   width: 100%;
