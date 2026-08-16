@@ -172,16 +172,17 @@ img {
 .btn-nav {
   padding: 10px 20px;
   font-size: 14px;
-  background: var(--accent);
-  color: #ffffff;
-  border-color: var(--accent);
-  box-shadow: 0 4px 12px rgba(14, 138, 107, 0.2);
+  background: var(--paper);
+  color: var(--accent-hover);
+  border-color: var(--paper);
+  box-shadow: none;
 }
 
 .btn-dark:hover,
 .btn-nav:hover {
-  background: var(--accent-hover);
-  border-color: var(--accent-hover);
+  background: #fff;
+  border-color: #fff;
+  color: var(--accent-hover);
 }
 
 .btn-nav {
@@ -211,10 +212,10 @@ img {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(246, 241, 231, 0.88);
-  border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: var(--accent);
+  border-bottom: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 .page-hero > .nav,
@@ -253,7 +254,7 @@ img {
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1;
-  color: var(--text);
+  color: #fff;
 }
 
 .logo-icon {
@@ -276,7 +277,7 @@ img {
   font-size: 15px;
   font-weight: 500;
   line-height: 1;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.82);
   padding: 8px 0;
   white-space: nowrap;
 }
@@ -285,11 +286,11 @@ img {
 .nav-dropdown:hover .nav-dropdown-trigger,
 .nav-dropdown:focus-within .nav-dropdown-trigger,
 .nav-dropdown.is-active .nav-dropdown-trigger {
-  color: var(--text);
+  color: #fff;
 }
 
 .nav-items a.is-active {
-  color: var(--accent);
+  color: #fff;
   font-weight: 600;
 }
 
