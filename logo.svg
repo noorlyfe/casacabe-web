@@ -4,12 +4,11 @@
       <circle cx="16" cy="16" r="11"/>
     </clipPath>
   </defs>
-  <rect width="32" height="32" fill="#f6f1e7"/>
-  <circle cx="16" cy="16" r="12.5" fill="#dceee6" stroke="#0e8a6b" stroke-width="2"/>
+  <circle cx="16" cy="16" r="12.5" fill="none" stroke="#0e8a6b" stroke-width="2"/>
   <g clip-path="url(#clip)">
     <path
       d="M11.25 18.75A5.5 5.5 0 1 1 20.75 18.75"
-      stroke="#1c2b26"
+      stroke="#0e8a6b"
       stroke-width="2.25"
       stroke-linecap="round"
       fill="none"
