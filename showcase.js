@@ -4,97 +4,91 @@
     'sales',
     'expenses',
     'invoices',
+    'import',
+    'products',
+    'vendors',
+    'purchasing',
+    'inventory',
     'reports',
+    'budgets',
+    'price-alerts',
+    'calendar',
     'staff',
     'settings'
   ];
 
-  var minWidth = 400;
-  var imagesBase = document.body.getAttribute('data-images-base') || 'images/';
+  var labels = {
+    dashboard: 'Dashboard',
+    sales: 'Sales',
+    expenses: 'Expenses',
+    invoices: 'Invoices',
+    import: 'Import',
+    products: 'Products',
+    vendors: 'Vendors',
+    purchasing: 'Purchasing',
+    inventory: 'Inventory',
+    reports: 'Reports',
+    budgets: 'Budgets',
+    'price-alerts': 'Price Alerts',
+    calendar: 'Calendar',
+    staff: 'Staff',
+    settings: 'Settings'
+  };
 
-  function imagePath(id) {
-    return imagesBase + id + '.png';
+  function validId(id) {
+    return screens.indexOf(id) !== -1;
   }
 
-  function imageOk(src) {
-    return new Promise(function (resolve, reject) {
-      var img = new Image();
-      img.onload = function () {
-        if (img.naturalWidth >= minWidth) resolve(src);
-        else reject();
-      };
-      img.onerror = reject;
-      img.src = src;
+  function activate(id) {
+    if (!validId(id)) id = screens[0];
+
+    document.querySelectorAll('.tour-nav-item, .tour-mobile-tab').forEach(function (el) {
+      var on = el.getAttribute('data-screen') === id;
+      el.classList.toggle('is-active', on);
+      el.setAttribute('aria-selected', on ? 'true' : 'false');
     });
+
+    document.querySelectorAll('.tour-screen').forEach(function (el) {
+      var on = el.getAttribute('data-screen') === id;
+      el.classList.toggle('is-active', on);
+      el.hidden = !on;
+    });
+
+    document.querySelectorAll('.tour-caption').forEach(function (el) {
+      el.classList.toggle('is-active', el.getAttribute('data-screen') === id);
+    });
+
+    var title = document.getElementById('tour-topbar-title');
+    if (title) title.textContent = labels[id] || 'Dashboard';
+
+    var body = document.querySelector('.tour-body');
+    if (body) body.scrollTop = 0;
+
+    if (history.replaceState) {
+      history.replaceState(null, '', '#' + id);
+    }
   }
 
-  function setupTabs(showcase) {
-    var tabs = showcase.querySelectorAll('.showcase-tab');
-    var imgs = showcase.querySelectorAll('.showcase-img');
-
-    tabs.forEach(function (tab) {
-      tab.addEventListener('click', function () {
-        var id = tab.getAttribute('data-screen');
-        tabs.forEach(function (t) {
-          var on = t === tab;
-          t.classList.toggle('is-active', on);
-          t.setAttribute('aria-selected', on ? 'true' : 'false');
-        });
-        imgs.forEach(function (img) {
-          img.classList.toggle('is-active', img.getAttribute('data-screen') === id);
-        });
+  function bind(selector) {
+    document.querySelectorAll(selector).forEach(function (el) {
+      el.addEventListener('click', function () {
+        activate(el.getAttribute('data-screen'));
       });
     });
   }
 
-  function reveal(el) {
-    if (!el) return;
-    el.hidden = false;
-    requestAnimationFrame(function () {
-      el.classList.add('is-visible');
+  document.addEventListener('DOMContentLoaded', function () {
+    if (!document.getElementById('tour-app')) return;
+
+    bind('.tour-nav-item');
+    bind('.tour-mobile-tab');
+
+    var fromHash = (location.hash || '').replace('#', '');
+    activate(validId(fromHash) ? fromHash : screens[0]);
+
+    window.addEventListener('hashchange', function () {
+      var id = (location.hash || '').replace('#', '');
+      if (validId(id)) activate(id);
     });
-  }
-
-  function initHeroPreview() {
-    var heroPreview = document.getElementById('hero-preview');
-    if (!heroPreview) return;
-
-    imageOk(imagePath('dashboard')).then(function () {
-      var dashWindow = document.querySelector('.dash-window');
-      if (dashWindow) dashWindow.style.visibility = 'hidden';
-      heroPreview.hidden = false;
-      reveal(heroPreview);
-    }).catch(function () {});
-  }
-
-  var showcase = document.getElementById('showcase');
-  if (showcase) {
-    showcase.querySelectorAll('.showcase-img').forEach(function (img) {
-      var id = img.getAttribute('data-screen');
-      if (id) img.src = imagePath(id);
-    });
-
-    screens.forEach(function (id) {
-      imageOk(imagePath(id)).catch(function () {
-        var tab = showcase.querySelector('.showcase-tab[data-screen="' + id + '"]');
-        var img = showcase.querySelector('.showcase-img[data-screen="' + id + '"]');
-        if (tab) tab.remove();
-        if (img) img.remove();
-      });
-    });
-
-    setTimeout(function () {
-      var section = document.getElementById('product');
-      var tabs = showcase.querySelectorAll('.showcase-tab');
-      if (!tabs.length) return;
-
-      setupTabs(showcase);
-      tabs[0].click();
-      reveal(showcase);
-
-      if (section) section.hidden = false;
-    }, 120);
-  }
-
-  initHeroPreview();
+  });
 })();

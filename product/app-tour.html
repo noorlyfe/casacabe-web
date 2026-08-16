@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="/logo.svg">
   <link rel="apple-touch-icon" href="/logo.svg">
-  <meta name="description" content="Tour Casacabe restaurant backoffice software: dashboard, sales, expenses, invoices, reports, staff, and settings screenshots for Mac and Windows.">
+  <meta name="description" content="Tour every Casacabe screen: dashboard, sales, expenses, invoices, import, products, vendors, purchasing, inventory, reports, budgets, price alerts, calendar, staff, and settings.">
   <meta name="keywords" content="restaurant backoffice app screenshots, restaurant dashboard software demo, Casacabe app tour">
   <link rel="canonical" href="https://casacabe.com/product/app-tour.html">
   <title>App Tour | Casacabe Restaurant Backoffice Software</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
-<body data-images-base="../images/">
+<body class="page-tour">
       <div class="site-header">
       <nav class="nav">
         <a href="../index.html" class="logo">
@@ -19,15 +19,7 @@
           <span>Casacabe</span>
         </a>
         <div class="nav-items">
-          <div class="nav-dropdown nav-keep">
-            <span class="nav-dropdown-trigger" tabindex="0">Product <span class="nav-dropdown-caret">▾</span></span>
-            <div class="nav-dropdown-menu" role="menu">
-              <a href="../product/try-before-you-buy.html" role="menuitem">Try it before you buy</a>
-              <a href="../product/app-tour.html" role="menuitem">App tour</a>
-              <a href="../product/overview.html" role="menuitem">Overview</a>
-              <a href="../product/requirements.html" role="menuitem">System requirements</a>
-            </div>
-          </div>
+          <a href="../product/app-tour.html" class="nav-keep is-active">App tour</a>
           <a href="../features.html" class="nav-keep">Features</a>
           <a href="../how-it-works.html" class="nav-keep">How it works</a>
           <a href="../about.html" class="nav-keep">About</a>
@@ -41,13 +33,13 @@
 <div class="container page-hero-content">
       <p class="page-eyebrow">Product</p>
       <h1 class="page-title">Casacabe app tour</h1>
-      <p class="page-intro">Real screenshots from the desktop app on Mac. Click a tab to switch screen. Same interface on Windows.</p>
+      <p class="page-intro">Click the sidebar the same way you would in the desktop app. Same screens, same layout, same grouping on Mac and Windows.</p>
     </div>
   </header>
 
   <main class="section page page-after-hero">
     <div class="container">
-      <div class="product-layout reveal">
+      <div class="product-layout reveal is-revealed">
         <aside class="product-sidebar">
           <p class="product-sidebar-title">Product</p>
           <nav aria-label="Product pages">
@@ -58,37 +50,840 @@
           </nav>
         </aside>
         <div class="product-main" style="min-width: 0;">
-          
-          <div class="showcase is-visible" id="showcase" style="opacity: 1; transform: none; max-width: none;">
-            <div class="showcase-tabs" role="tablist" aria-label="App screens">
-              <button type="button" class="showcase-tab is-active" role="tab" aria-selected="true" data-screen="dashboard">Dashboard</button>
-              <button type="button" class="showcase-tab" role="tab" aria-selected="false" data-screen="sales">Sales</button>
-              <button type="button" class="showcase-tab" role="tab" aria-selected="false" data-screen="expenses">Expenses</button>
-              <button type="button" class="showcase-tab" role="tab" aria-selected="false" data-screen="invoices">Invoices</button>
-              <button type="button" class="showcase-tab" role="tab" aria-selected="false" data-screen="reports">Reports</button>
-              <button type="button" class="showcase-tab" role="tab" aria-selected="false" data-screen="staff">Staff</button>
-              <button type="button" class="showcase-tab" role="tab" aria-selected="false" data-screen="settings">Settings</button>
-            </div>
-            <div class="showcase-frame">
-              <img class="showcase-img is-active" data-screen="dashboard" src="../images/dashboard.png" alt="Casacabe restaurant dashboard showing revenue, expenses, and prime cost" width="1200" height="750" loading="lazy">
-              <img class="showcase-img" data-screen="sales" src="../images/sales.png" alt="Casacabe sales tracking by channel" width="1200" height="750" loading="lazy">
-              <img class="showcase-img" data-screen="expenses" src="../images/expenses.png" alt="Casacabe expense tracking by category" width="1200" height="750" loading="lazy">
-              <img class="showcase-img" data-screen="invoices" src="../images/invoices.png" alt="Casacabe vendor invoice management" width="1200" height="750" loading="lazy">
-              <img class="showcase-img" data-screen="reports" src="../images/reports.png" alt="Casacabe profit and loss reports" width="1200" height="750" loading="lazy">
-              <img class="showcase-img" data-screen="staff" src="../images/staff.png" alt="Casacabe staff and labor cost planning" width="1200" height="750" loading="lazy">
-              <img class="showcase-img" data-screen="settings" src="../images/settings.png" alt="Casacabe restaurant settings" width="1200" height="750" loading="lazy">
+
+          <div class="tour-mobile-nav" role="tablist" aria-label="App screens">
+            <button type="button" class="showcase-tab tour-mobile-tab is-active" role="tab" aria-selected="true" data-screen="dashboard">Dashboard</button>
+            <button type="button" class="showcase-tab tour-mobile-tab" role="tab" aria-selected="false" data-screen="sales">Sales</button>
+            <button type="button" class="showcase-tab tour-mobile-tab" role="tab" aria-selected="false" data-screen="expenses">Expenses</button>
+            <button type="button" class="showcase-tab tour-mobile-tab" role="tab" aria-selected="false" data-screen="invoices">Invoices</button>
+            <button type="button" class="showcase-tab tour-mobile-tab" role="tab" aria-selected="false" data-screen="import">Import</button>
+            <button type="button" class="showcase-tab tour-mobile-tab" role="tab" aria-selected="false" data-screen="products">Products</button>
+            <button type="button" class="showcase-tab tour-mobile-tab" role="tab" aria-selected="false" data-screen="vendors">Vendors</button>
+            <button type="button" class="showcase-tab tour-mobile-tab" role="tab" aria-selected="false" data-screen="purchasing">Purchasing</button>
+            <button type="button" class="showcase-tab tour-mobile-tab" role="tab" aria-selected="false" data-screen="inventory">Inventory</button>
+            <button type="button" class="showcase-tab tour-mobile-tab" role="tab" aria-selected="false" data-screen="reports">Reports</button>
+            <button type="button" class="showcase-tab tour-mobile-tab" role="tab" aria-selected="false" data-screen="budgets">Budgets</button>
+            <button type="button" class="showcase-tab tour-mobile-tab" role="tab" aria-selected="false" data-screen="price-alerts">Price Alerts</button>
+            <button type="button" class="showcase-tab tour-mobile-tab" role="tab" aria-selected="false" data-screen="calendar">Calendar</button>
+            <button type="button" class="showcase-tab tour-mobile-tab" role="tab" aria-selected="false" data-screen="staff">Staff</button>
+            <button type="button" class="showcase-tab tour-mobile-tab" role="tab" aria-selected="false" data-screen="settings">Settings</button>
+          </div>
+
+          <div class="tour-app" id="tour-app" aria-label="Casacabe desktop app tour">
+            <aside class="tour-sidebar">
+              <p class="tour-logo">Casacabe</p>
+              <nav class="tour-nav" aria-label="App sidebar">
+                <div class="tour-nav-section">
+                  <p class="tour-nav-heading">Overview</p>
+                  <div class="tour-nav-items">
+                    <button type="button" class="tour-nav-item is-active" data-screen="dashboard" aria-selected="true">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+                      Dashboard
+                    </button>
+                  </div>
+                </div>
+                <div class="tour-nav-section">
+                  <p class="tour-nav-heading">Bookkeeping</p>
+                  <div class="tour-nav-items">
+                    <button type="button" class="tour-nav-item" data-screen="sales" aria-selected="false">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l5-5 4 4 8-8"/><path d="M21 8v5h-5"/></svg>
+                      Sales
+                    </button>
+                    <button type="button" class="tour-nav-item" data-screen="expenses" aria-selected="false">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><line x1="2.5" y1="10" x2="21.5" y2="10"/><line x1="6" y1="15" x2="10" y2="15"/></svg>
+                      Expenses
+                    </button>
+                    <button type="button" class="tour-nav-item" data-screen="invoices" aria-selected="false">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h9l4 4v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z"/><polyline points="14 2 14 7 19 7"/><line x1="8.5" y1="13" x2="15.5" y2="13"/><line x1="8.5" y1="17" x2="13" y2="17"/></svg>
+                      Invoices
+                    </button>
+                    <button type="button" class="tour-nav-item" data-screen="import" aria-selected="false">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                      Import
+                    </button>
+                    <button type="button" class="tour-nav-item" data-screen="products" aria-selected="false">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="M3.3 7.7 12 12.5l8.7-4.8"/><path d="M12 22V12.5"/></svg>
+                      Products
+                    </button>
+                  </div>
+                </div>
+                <div class="tour-nav-section">
+                  <p class="tour-nav-heading">Operations</p>
+                  <div class="tour-nav-items">
+                    <button type="button" class="tour-nav-item" data-screen="vendors" aria-selected="false">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h18v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9Z"/><path d="M3 9l2.5-5h13L21 9"/><path d="M9 14h6"/></svg>
+                      Vendors
+                    </button>
+                    <button type="button" class="tour-nav-item" data-screen="purchasing" aria-selected="false">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="17" cy="20" r="1.5"/><path d="M2 4h2l2.5 12H19l2-8H6"/></svg>
+                      Purchasing
+                    </button>
+                    <button type="button" class="tour-nav-item" data-screen="inventory" aria-selected="false">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7Z"/><path d="M8 7V5a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>
+                      Inventory
+                    </button>
+                  </div>
+                </div>
+                <div class="tour-nav-section">
+                  <p class="tour-nav-heading">Insights</p>
+                  <div class="tour-nav-items">
+                    <button type="button" class="tour-nav-item" data-screen="reports" aria-selected="false">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2.5"/><line x1="8" y1="16" x2="8" y2="11"/><line x1="12" y1="16" x2="12" y2="8"/><line x1="16" y1="16" x2="16" y2="13"/></svg>
+                      Reports
+                    </button>
+                    <button type="button" class="tour-nav-item" data-screen="budgets" aria-selected="false">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg>
+                      Budgets
+                    </button>
+                    <button type="button" class="tour-nav-item" data-screen="price-alerts" aria-selected="false">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 8 3 8H3s3-1 3-8"/><path d="M10.3 21a1.7 1.7 0 0 0 3.4 0"/></svg>
+                      Price Alerts
+                    </button>
+                    <button type="button" class="tour-nav-item" data-screen="calendar" aria-selected="false">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2.5"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+                      Calendar
+                    </button>
+                  </div>
+                </div>
+                <div class="tour-nav-section">
+                  <p class="tour-nav-heading">Team</p>
+                  <div class="tour-nav-items">
+                    <button type="button" class="tour-nav-item" data-screen="staff" aria-selected="false">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 20a5.5 5.5 0 0 1 11 0"/><path d="M17 8.5a3 3 0 0 1 0 5.5"/><path d="M19 20a5 5 0 0 0-3-4.6"/></svg>
+                      Staff
+                    </button>
+                  </div>
+                </div>
+              </nav>
+              <nav class="tour-nav-footer">
+                <button type="button" class="tour-nav-item" data-screen="settings" aria-selected="false">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                  Settings
+                </button>
+              </nav>
+            </aside>
+
+            <div class="tour-main">
+              <header class="tour-topbar">
+                <h2 class="tour-topbar-title" id="tour-topbar-title">Dashboard</h2>
+              </header>
+              <div class="tour-body">
+
+                <section class="tour-screen is-active" data-screen="dashboard" aria-label="Dashboard">
+                  <div class="tour-pagehead">
+                    <div>
+                      <h3 class="tour-title">Taylors Corner</h3>
+                      <p class="tour-sub">Net profit $61,926 · 15.0% margin · 2026</p>
+                    </div>
+                    <div class="tour-actions">
+                      <span class="tour-pill">2026</span>
+                      <span class="tour-btn">+ Add sale</span>
+                    </div>
+                  </div>
+                  <div class="tour-alerts">
+                    <div class="tour-alert">
+                      <span class="tour-alert-dot warn"></span>
+                      <div><strong>1 unpaid invoice</strong><span>$2,180 outstanding</span></div>
+                    </div>
+                    <div class="tour-alert">
+                      <span class="tour-alert-dot good"></span>
+                      <div><strong>Prime cost on target</strong><span>58.0% of sales — aim for ≤ 60%</span></div>
+                    </div>
+                  </div>
+                  <div class="tour-stats">
+                    <div class="tour-panel"><p class="tour-label">Total Revenue</p><p class="tour-stat-value">$412,840</p><div class="tour-stat-meta">vs. last period <span class="tour-delta-up">+6%</span></div></div>
+                    <div class="tour-panel"><p class="tour-label">Total Expenses</p><p class="tour-stat-value">$350,914</p><div class="tour-stat-meta">vs. last period <span class="tour-delta-down">+3%</span></div></div>
+                    <div class="tour-panel"><p class="tour-label">Net Profit</p><p class="tour-stat-value tour-good">$61,926</p><div class="tour-stat-meta">15.0% margin <span class="tour-delta-up">+12%</span></div></div>
+                    <div class="tour-panel"><p class="tour-label">Gross Profit</p><p class="tour-stat-value">$280,731</p><div class="tour-stat-meta">68.0% margin</div></div>
+                  </div>
+                  <div class="tour-grid-2">
+                    <div class="tour-panel">
+                      <div class="tour-panel-head"><p class="tour-label">Prime Cost</p><span class="tour-badge tour-badge-good">On target</span></div>
+                      <div class="tour-gauge-row"><span class="tour-gauge-value tour-good">58.0%</span><span class="tour-sub">of sales</span></div>
+                      <div class="tour-gauge-track">
+                        <div class="tour-gauge-zone" style="width: 60%"></div>
+                        <div class="tour-gauge-fill" style="width: 58%; background: #0e8a6b"></div>
+                        <div class="tour-gauge-mark" style="left: 60%"></div>
+                      </div>
+                      <div class="tour-gauge-meta"><span>$239,447 · COGS + Labor</span><span>Target ≤ 60%</span></div>
+                    </div>
+                    <div class="tour-panel">
+                      <p class="tour-label">Cost ratios</p>
+                      <div class="tour-ratio"><span class="tour-ratio-left"><span class="tour-dot" style="background:#15803d"></span>Food &amp; beverage (COGS)</span><span class="tour-ratio-right tour-good">32.0% <span class="tour-ratio-bench">≤ 35%</span></span></div>
+                      <div class="tour-ratio"><span class="tour-ratio-left"><span class="tour-dot" style="background:#15803d"></span>Labor</span><span class="tour-ratio-right tour-good">26.0% <span class="tour-ratio-bench">≤ 32%</span></span></div>
+                      <div class="tour-ratio"><span class="tour-ratio-left"><span class="tour-dot" style="background:#15803d"></span>Net margin</span><span class="tour-ratio-right tour-good">15.0%</span></div>
+                      <p class="tour-sub" style="margin-top:12px"><span class="tour-link">View full P&amp;L →</span></p>
+                    </div>
+                  </div>
+                  <div class="tour-grid-2">
+                    <div class="tour-panel">
+                      <p class="tour-label">Revenue by channel</p>
+                      <div class="tour-break">
+                        <div class="tour-break-row"><span class="tour-break-name">Dine-In</span><span class="tour-break-track"><span class="tour-break-fill" style="width:60%;background:#0e8a6b"></span></span><span class="tour-break-val">$247,704</span></div>
+                        <div class="tour-break-row"><span class="tour-break-name">Takeout</span><span class="tour-break-track"><span class="tour-break-fill" style="width:20%;background:#2563eb"></span></span><span class="tour-break-val">$82,568</span></div>
+                        <div class="tour-break-row"><span class="tour-break-name">Delivery</span><span class="tour-break-track"><span class="tour-break-fill" style="width:12%;background:#d97706"></span></span><span class="tour-break-val">$49,541</span></div>
+                        <div class="tour-break-row"><span class="tour-break-name">Catering</span><span class="tour-break-track"><span class="tour-break-fill" style="width:6%;background:#7c3aed"></span></span><span class="tour-break-val">$24,770</span></div>
+                        <div class="tour-break-row"><span class="tour-break-name">Bar</span><span class="tour-break-track"><span class="tour-break-fill" style="width:2%;background:#db2777"></span></span><span class="tour-break-val">$8,257</span></div>
+                      </div>
+                    </div>
+                    <div class="tour-panel">
+                      <p class="tour-label">Where money goes</p>
+                      <div class="tour-break">
+                        <div class="tour-break-row"><span class="tour-break-name">COGS</span><span class="tour-break-track"><span class="tour-break-fill" style="width:38%;background:#d97706"></span></span><span class="tour-break-val">$132,109</span></div>
+                        <div class="tour-break-row"><span class="tour-break-name">Labor</span><span class="tour-break-track"><span class="tour-break-fill" style="width:31%;background:#2563eb"></span></span><span class="tour-break-val">$107,338</span></div>
+                        <div class="tour-break-row"><span class="tour-break-name">Operating</span><span class="tour-break-track"><span class="tour-break-fill" style="width:18%;background:#64748b"></span></span><span class="tour-break-val">$61,926</span></div>
+                        <div class="tour-break-row"><span class="tour-break-name">Occupancy</span><span class="tour-break-track"><span class="tour-break-fill" style="width:12%;background:#7c3aed"></span></span><span class="tour-break-val">$41,284</span></div>
+                        <div class="tour-break-row"><span class="tour-break-name">Other</span><span class="tour-break-track"><span class="tour-break-fill" style="width:2%;background:#9094a0"></span></span><span class="tour-break-val">$8,257</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tour-grid-2">
+                    <div class="tour-panel">
+                      <div class="tour-panel-head"><p class="tour-label">Recent activity</p><span class="tour-link">View all</span></div>
+                      <div class="tour-list">
+                        <div class="tour-list-row"><div><p>Saturday dinner service</p><small>Aug 8 · Dine-In</small></div><span class="tour-list-amt tour-good">$4,280</span></div>
+                        <div class="tour-list-row"><div><p>Sysco produce order</p><small>Aug 7 · Food</small></div><span class="tour-list-amt">$1,840</span></div>
+                        <div class="tour-list-row"><div><p>Lunch takeout</p><small>Aug 7 · Takeout</small></div><span class="tour-list-amt tour-good">$1,120</span></div>
+                      </div>
+                    </div>
+                    <div class="tour-panel">
+                      <div class="tour-panel-head"><p class="tour-label">Unpaid invoices</p><span class="tour-link">Manage</span></div>
+                      <div class="tour-list">
+                        <div class="tour-list-row"><div><p>Harvest Provisions</p><small>INV-1042 · Due Aug 18</small></div><span class="tour-list-amt">$2,180</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="tour-screen" data-screen="sales" aria-label="Sales">
+                  <div class="tour-pagehead">
+                    <div>
+                      <p class="tour-eyebrow">Bookkeeping</p>
+                      <h3 class="tour-title">Sales</h3>
+                      <p class="tour-sub">Revenue by channel · 2026</p>
+                    </div>
+                    <span class="tour-pill">2026</span>
+                  </div>
+                  <div class="tour-stats tour-stats-3">
+                    <div class="tour-panel"><p class="tour-label">This period</p><p class="tour-stat-value">$54,200</p><div class="tour-stat-meta">August 2026</div></div>
+                    <div class="tour-panel"><p class="tour-label">2026 total</p><p class="tour-stat-value">$412,840</p><div class="tour-stat-meta">Year to date <span class="tour-delta-up">+6%</span></div></div>
+                    <div class="tour-panel"><p class="tour-label">Best month</p><p class="tour-stat-value">June</p><div class="tour-stat-meta">$58,940</div></div>
+                  </div>
+                  <div class="tour-panel">
+                    <p class="tour-label">Monthly revenue · 2026</p>
+                    <div class="tour-bars">
+                      <div class="tour-bar" style="height:62%"></div>
+                      <div class="tour-bar" style="height:68%"></div>
+                      <div class="tour-bar" style="height:74%"></div>
+                      <div class="tour-bar" style="height:80%"></div>
+                      <div class="tour-bar" style="height:86%"></div>
+                      <div class="tour-bar" style="height:100%"></div>
+                      <div class="tour-bar" style="height:92%"></div>
+                      <div class="tour-bar is-current" style="height:88%"></div>
+                      <div class="tour-bar" style="height:8%;opacity:.35"></div>
+                      <div class="tour-bar" style="height:8%;opacity:.35"></div>
+                      <div class="tour-bar" style="height:8%;opacity:.35"></div>
+                      <div class="tour-bar" style="height:8%;opacity:.35"></div>
+                    </div>
+                    <div class="tour-bar-months"><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span></div>
+                  </div>
+                  <div class="tour-grid-5">
+                    <div class="tour-panel">
+                      <p class="tour-label">By channel</p>
+                      <div class="tour-break">
+                        <div class="tour-break-row"><span class="tour-break-name">Dine-In</span><span class="tour-break-track"><span class="tour-break-fill" style="width:60%;background:#0e8a6b"></span></span><span class="tour-break-val">$247,704</span></div>
+                        <div class="tour-break-row"><span class="tour-break-name">Takeout</span><span class="tour-break-track"><span class="tour-break-fill" style="width:20%;background:#2563eb"></span></span><span class="tour-break-val">$82,568</span></div>
+                        <div class="tour-break-row"><span class="tour-break-name">Delivery</span><span class="tour-break-track"><span class="tour-break-fill" style="width:12%;background:#d97706"></span></span><span class="tour-break-val">$49,541</span></div>
+                      </div>
+                    </div>
+                    <div class="tour-panel">
+                      <p class="tour-label" style="margin-bottom:16px">Log a sale</p>
+                      <div class="tour-form">
+                        <div class="tour-field"><label>Date</label><input type="text" value="2026-08-13" readonly tabindex="-1"></div>
+                        <div class="tour-field"><label>Channel</label><input type="text" value="Dine-In" readonly tabindex="-1"></div>
+                        <div class="tour-field"><label>Amount</label><input type="text" value="" placeholder="0" readonly tabindex="-1"></div>
+                        <div class="tour-field"><label>Note</label><input type="text" value="" placeholder="Optional" readonly tabindex="-1"></div>
+                      </div>
+                      <div style="margin-top:16px"><span class="tour-btn">Add sale</span></div>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="tour-screen" data-screen="expenses" aria-label="Expenses">
+                  <div class="tour-pagehead">
+                    <div>
+                      <p class="tour-eyebrow">Bookkeeping</p>
+                      <h3 class="tour-title">Expenses</h3>
+                      <p class="tour-sub">Costs by category · 2026</p>
+                    </div>
+                    <span class="tour-pill">2026</span>
+                  </div>
+                  <div class="tour-stats tour-stats-3">
+                    <div class="tour-panel"><p class="tour-label">Total expenses</p><p class="tour-stat-value">$350,914</p><div class="tour-stat-meta">2026</div></div>
+                    <div class="tour-panel"><p class="tour-label">Food &amp; beverage COGS %</p><p class="tour-stat-value tour-good">32.0%</p><div class="tour-stat-meta">of sales</div></div>
+                    <div class="tour-panel"><p class="tour-label">Labor %</p><p class="tour-stat-value tour-good">26.0%</p><div class="tour-stat-meta">of sales</div></div>
+                  </div>
+                  <div class="tour-grid-5">
+                    <div class="tour-panel">
+                      <p class="tour-label">By cost group</p>
+                      <div class="tour-break">
+                        <div class="tour-break-row"><span class="tour-break-name">COGS</span><span class="tour-break-track"><span class="tour-break-fill" style="width:38%;background:#d97706"></span></span><span class="tour-break-val">$132,109</span></div>
+                        <div class="tour-break-row"><span class="tour-break-name">Labor</span><span class="tour-break-track"><span class="tour-break-fill" style="width:31%;background:#2563eb"></span></span><span class="tour-break-val">$107,338</span></div>
+                        <div class="tour-break-row"><span class="tour-break-name">Operating</span><span class="tour-break-track"><span class="tour-break-fill" style="width:18%;background:#64748b"></span></span><span class="tour-break-val">$61,926</span></div>
+                        <div class="tour-break-row"><span class="tour-break-name">Occupancy</span><span class="tour-break-track"><span class="tour-break-fill" style="width:12%;background:#7c3aed"></span></span><span class="tour-break-val">$41,284</span></div>
+                      </div>
+                    </div>
+                    <div class="tour-panel">
+                      <p class="tour-label" style="margin-bottom:16px">Add an expense</p>
+                      <div class="tour-form">
+                        <div class="tour-field"><label>Date</label><input type="text" value="2026-08-13" readonly tabindex="-1"></div>
+                        <div class="tour-field"><label>Category</label><input type="text" value="Food" readonly tabindex="-1"></div>
+                        <div class="tour-field"><label>Amount</label><input type="text" placeholder="0" readonly tabindex="-1"></div>
+                        <div class="tour-field"><label>Note</label><input type="text" placeholder="Optional" readonly tabindex="-1"></div>
+                      </div>
+                      <div style="margin-top:16px"><span class="tour-btn">Add expense</span></div>
+                    </div>
+                  </div>
+                  <div class="tour-panel">
+                    <p class="tour-label" style="margin-bottom:8px">Recent expenses</p>
+                    <div class="tour-list">
+                      <div class="tour-list-row"><div><p>Sysco produce order</p><small>Aug 7 · Food</small></div><span class="tour-list-amt">$1,840</span></div>
+                      <div class="tour-list-row"><div><p>Weekly wages</p><small>Aug 6 · Wages</small></div><span class="tour-list-amt">$3,692</span></div>
+                      <div class="tour-list-row"><div><p>August rent</p><small>Aug 1 · Rent</small></div><span class="tour-list-amt">$5,200</span></div>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="tour-screen" data-screen="invoices" aria-label="Invoices">
+                  <div class="tour-pagehead">
+                    <div>
+                      <p class="tour-eyebrow">Bookkeeping</p>
+                      <h3 class="tour-title">Invoices</h3>
+                      <p class="tour-sub">Create professional invoices, export PDFs, and track payment status.</p>
+                    </div>
+                  </div>
+                  <div class="tour-invoice">
+                    <div class="tour-panel">
+                      <p class="tour-label" style="margin-bottom:16px">Invoice builder</p>
+                      <div class="tour-form">
+                        <div class="tour-field"><label>Invoice number</label><input type="text" value="INV-1042" readonly tabindex="-1"></div>
+                        <div class="tour-field"><label>Status</label><input type="text" value="Unpaid" readonly tabindex="-1"></div>
+                        <div class="tour-field"><label>Restaurant name</label><input type="text" value="Taylors Corner" readonly tabindex="-1"></div>
+                        <div class="tour-field"><label>Client / vendor</label><input type="text" value="Harvest Provisions" readonly tabindex="-1"></div>
+                      </div>
+                      <table class="tour-table" style="margin-top:16px">
+                        <thead><tr><th>Description</th><th class="num">Qty</th><th class="num">Unit price</th><th class="num">Total</th></tr></thead>
+                        <tbody>
+                          <tr><td>Mixed greens, 20 lb</td><td class="num">20</td><td class="num">$4.20</td><td class="num">$84</td></tr>
+                          <tr><td>Heirloom tomatoes, case</td><td class="num">6</td><td class="num">$38.00</td><td class="num">$228</td></tr>
+                          <tr><td>Weekly produce standing order</td><td class="num">1</td><td class="num">$1,868.00</td><td class="num">$1,868</td></tr>
+                        </tbody>
+                      </table>
+                      <div style="display:flex;gap:8px;margin-top:16px"><span class="tour-btn">Save invoice</span><span class="tour-btn tour-btn-outline">Export as PDF</span></div>
+                    </div>
+                    <div class="tour-preview">
+                      <h4>Taylors Corner</h4>
+                      <p>184 Market Street<br>Invoice INV-1042 · Due Aug 18, 2026</p>
+                      <p><strong style="color:#16181d">Bill to</strong><br>Harvest Provisions</p>
+                      <div class="tour-preview-line"><span>Subtotal</span><span>$2,180</span></div>
+                      <div class="tour-preview-line"><span>Sales tax (0%)</span><span>$0</span></div>
+                      <div class="tour-preview-line"><strong>Total</strong><strong>$2,180</strong></div>
+                      <p style="margin-top:12px"><span class="tour-badge tour-badge-warn">Unpaid</span></p>
+                    </div>
+                  </div>
+                  <div class="tour-panel">
+                    <p class="tour-label" style="margin-bottom:8px">Saved invoices</p>
+                    <table class="tour-table">
+                      <thead><tr><th>Number</th><th>Vendor</th><th>Date</th><th class="num">Amount</th><th>Status</th></tr></thead>
+                      <tbody>
+                        <tr><td>INV-1042</td><td>Harvest Provisions</td><td>Aug 4</td><td class="num">$2,180</td><td><span class="tour-badge tour-badge-warn">Unpaid</span></td></tr>
+                        <tr><td>INV-1038</td><td>Metro Produce</td><td>Jul 22</td><td class="num">$960</td><td><span class="tour-badge tour-badge-good">Paid</span></td></tr>
+                        <tr><td>INV-1031</td><td>Breakthru Beverage</td><td>Jul 12</td><td class="num">$1,440</td><td><span class="tour-badge tour-badge-good">Paid</span></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+
+                <section class="tour-screen" data-screen="import" aria-label="Import">
+                  <div>
+                    <h3 class="tour-title">Import Your Data</h3>
+                    <p class="tour-sub">Match your CSV to the templates below, then upload one file at a time.</p>
+                  </div>
+                  <div class="tour-grid-2">
+                    <div class="tour-panel">
+                      <p class="tour-label">Sales Data</p>
+                      <p class="tour-sub" style="margin:8px 0 12px">Date, Description, Amount, Category</p>
+                      <span class="tour-btn tour-btn-outline">Download Template</span>
+                    </div>
+                    <div class="tour-panel">
+                      <p class="tour-label">Expenses Data</p>
+                      <p class="tour-sub" style="margin:8px 0 12px">Date, Vendor, Description, Amount, Category</p>
+                      <span class="tour-btn tour-btn-outline">Download Template</span>
+                    </div>
+                  </div>
+                  <div class="tour-drop">
+                    <strong>Drag your CSV here or click to browse</strong>
+                    <span>.csv files only</span>
+                  </div>
+                  <div class="tour-panel">
+                    <p class="tour-label">Auto-import folder</p>
+                    <p class="tour-sub" style="margin:8px 0 12px">Watch a folder and import new CSV files as they appear.</p>
+                    <div class="tour-actions"><span class="tour-btn tour-btn-outline">Choose folder</span><span class="tour-btn tour-btn-outline">Save folder</span></div>
+                  </div>
+                </section>
+
+                <section class="tour-screen" data-screen="products" aria-label="Products">
+                  <div class="tour-pagehead">
+                    <div>
+                      <p class="tour-eyebrow">Bookkeeping</p>
+                      <h3 class="tour-title">Products</h3>
+                      <p class="tour-sub">Ingredient and supply catalog. Foundation for food cost and price tracking.</p>
+                    </div>
+                  </div>
+                  <div class="tour-stats tour-stats-3">
+                    <div class="tour-panel"><p class="tour-label">Active products</p><p class="tour-stat-value">24</p><div class="tour-stat-meta">26 total</div></div>
+                    <div class="tour-panel"><p class="tour-label">With price</p><p class="tour-stat-value tour-good">22</p><div class="tour-stat-meta">2 missing price</div></div>
+                    <div class="tour-panel"><p class="tour-label">Food items</p><p class="tour-stat-value">18</p><div class="tour-stat-meta">6 beverage</div></div>
+                  </div>
+                  <div class="tour-panel">
+                    <p class="tour-label" style="margin-bottom:8px">Catalog</p>
+                    <table class="tour-table">
+                      <thead><tr><th>Product</th><th>Category</th><th>Unit</th><th class="num">Latest price</th><th>Updated</th><th>Status</th></tr></thead>
+                      <tbody>
+                        <tr><td>Chicken breast</td><td>Food</td><td>lb</td><td class="num">$3.40</td><td>Aug 4</td><td><span class="tour-badge tour-badge-good">Active</span></td></tr>
+                        <tr><td>Olive oil</td><td>Food</td><td>L</td><td class="num">$12.80</td><td>Aug 2</td><td><span class="tour-badge tour-badge-good">Active</span></td></tr>
+                        <tr><td>House red</td><td>Beverage</td><td>bottle</td><td class="num">$9.20</td><td>Jul 28</td><td><span class="tour-badge tour-badge-good">Active</span></td></tr>
+                        <tr><td>All-purpose flour</td><td>Food</td><td>kg</td><td class="num">$1.15</td><td>Jul 12</td><td><span class="tour-badge tour-badge-good">Active</span></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="tour-grid-2">
+                    <div class="tour-panel">
+                      <p class="tour-label" style="margin-bottom:16px">Add product</p>
+                      <div class="tour-form">
+                        <div class="tour-field"><label>Name</label><input type="text" placeholder="Product name" readonly tabindex="-1"></div>
+                        <div class="tour-field"><label>Category</label><input type="text" value="Food" readonly tabindex="-1"></div>
+                        <div class="tour-field"><label>Unit</label><input type="text" value="kg" readonly tabindex="-1"></div>
+                        <div class="tour-field"><label>Current price</label><input type="text" placeholder="Optional" readonly tabindex="-1"></div>
+                      </div>
+                      <div style="margin-top:16px"><span class="tour-btn">Add product</span></div>
+                    </div>
+                    <div class="tour-panel">
+                      <p class="tour-label" style="margin-bottom:16px">Update price</p>
+                      <div class="tour-form">
+                        <div class="tour-field"><label>Product</label><input type="text" value="Olive oil" readonly tabindex="-1"></div>
+                        <div class="tour-field"><label>New price</label><input type="text" placeholder="0.00" readonly tabindex="-1"></div>
+                      </div>
+                      <div style="margin-top:16px"><span class="tour-btn">Record price</span></div>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="tour-screen" data-screen="vendors" aria-label="Vendors">
+                  <div class="tour-pagehead">
+                    <div>
+                      <p class="tour-eyebrow">Operations</p>
+                      <h3 class="tour-title">Vendors</h3>
+                      <p class="tour-sub">Suppliers, default categories, and product links. Invoice spend matched by vendor link or name.</p>
+                    </div>
+                  </div>
+                  <div class="tour-stats tour-stats-3">
+                    <div class="tour-panel"><p class="tour-label">Active vendors</p><p class="tour-stat-value">6</p><div class="tour-stat-meta">6 total</div></div>
+                    <div class="tour-panel"><p class="tour-label">Linked products</p><p class="tour-stat-value">18</p><div class="tour-stat-meta">Across all vendors</div></div>
+                    <div class="tour-panel"><p class="tour-label">With invoices</p><p class="tour-stat-value">4</p><div class="tour-stat-meta">Matched from Invoices</div></div>
+                  </div>
+                  <div class="tour-panel">
+                    <p class="tour-label" style="margin-bottom:8px">Vendor directory</p>
+                    <table class="tour-table">
+                      <thead><tr><th>Vendor</th><th>Contact</th><th>Terms</th><th>Default category</th><th class="num">Invoice spend</th><th>Status</th></tr></thead>
+                      <tbody>
+                        <tr><td>Sysco</td><td>A. Nguyen</td><td>Net 30</td><td>Food</td><td class="num">$48,220</td><td><span class="tour-badge tour-badge-good">Active</span></td></tr>
+                        <tr><td>Harvest Provisions</td><td>J. Hale</td><td>Net 15</td><td>Food</td><td class="num">$12,640</td><td><span class="tour-badge tour-badge-good">Active</span></td></tr>
+                        <tr><td>Breakthru Beverage</td><td>M. Cole</td><td>Net 30</td><td>Beverages</td><td class="num">$9,180</td><td><span class="tour-badge tour-badge-good">Active</span></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="tour-panel">
+                    <p class="tour-label" style="margin-bottom:16px">Add vendor</p>
+                    <div class="tour-form">
+                      <div class="tour-field"><label>Vendor name</label><input type="text" placeholder="Vendor name" readonly tabindex="-1"></div>
+                      <div class="tour-field"><label>Payment terms</label><input type="text" value="Net 30" readonly tabindex="-1"></div>
+                      <div class="tour-field"><label>Email</label><input type="text" placeholder="email@vendor.com" readonly tabindex="-1"></div>
+                      <div class="tour-field"><label>Default category</label><input type="text" value="Food" readonly tabindex="-1"></div>
+                    </div>
+                    <div style="margin-top:16px"><span class="tour-btn">Add vendor</span></div>
+                  </div>
+                </section>
+
+                <section class="tour-screen" data-screen="purchasing" aria-label="Purchasing">
+                  <div class="tour-pagehead">
+                    <div>
+                      <p class="tour-eyebrow">Operations</p>
+                      <h3 class="tour-title">Purchasing</h3>
+                      <p class="tour-sub">Purchase orders, receiving, and delivery matching</p>
+                    </div>
+                  </div>
+                  <div class="tour-stats tour-stats-3">
+                    <div class="tour-panel"><p class="tour-label">Draft POs</p><p class="tour-stat-value">1</p><div class="tour-stat-meta">$640</div></div>
+                    <div class="tour-panel"><p class="tour-label">Awaiting delivery</p><p class="tour-stat-value">1</p><div class="tour-stat-meta">$1,840</div></div>
+                    <div class="tour-panel"><p class="tour-label">Received</p><p class="tour-stat-value">8</p><div class="tour-stat-meta">$21,460</div></div>
+                  </div>
+                  <div class="tour-grid-2">
+                    <div class="tour-panel">
+                      <p class="tour-label" style="margin-bottom:16px">Create purchase order</p>
+                      <div class="tour-form">
+                        <div class="tour-field"><label>Vendor</label><input type="text" value="Sysco" readonly tabindex="-1"></div>
+                        <div class="tour-field"><label>Order date</label><input type="text" value="2026-08-13" readonly tabindex="-1"></div>
+                        <div class="tour-field tour-field-wide"><label>Notes</label><input type="text" value="Prefill from vendor order guide" readonly tabindex="-1"></div>
+                      </div>
+                      <div style="margin-top:16px"><span class="tour-btn">Create PO</span></div>
+                    </div>
+                    <div class="tour-panel">
+                      <p class="tour-label" style="margin-bottom:8px">Purchase orders</p>
+                      <div class="tour-list">
+                        <div class="tour-list-row"><div><p>PO-1042 · Sysco</p><small>Aug 11 · 12 items · $1,840</small></div><span class="tour-badge tour-badge-sent">Sent</span></div>
+                        <div class="tour-list-row"><div><p>PO-1041 · Harvest Provisions</p><small>Aug 4 · 8 items · $960</small></div><span class="tour-badge tour-badge-received">Received</span></div>
+                        <div class="tour-list-row"><div><p>PO-1040 · Breakthru Beverage</p><small>Aug 1 · 4 items · $640</small></div><span class="tour-badge tour-badge-muted">Draft</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="tour-screen" data-screen="inventory" aria-label="Inventory">
+                  <div class="tour-pagehead">
+                    <div>
+                      <p class="tour-eyebrow">Operations</p>
+                      <h3 class="tour-title">Inventory</h3>
+                      <p class="tour-sub">Count sheets, posted inventories, waste, and usage between counts</p>
+                    </div>
+                  </div>
+                  <div class="tour-stats tour-stats-3">
+                    <div class="tour-panel"><p class="tour-label">Count sheets</p><p class="tour-stat-value">2</p><div class="tour-stat-meta">Walk-in + dry storage</div></div>
+                    <div class="tour-panel"><p class="tour-label">Inventory value</p><p class="tour-stat-value">$8,420</p><div class="tour-stat-meta">Latest posted count</div></div>
+                    <div class="tour-panel"><p class="tour-label">Waste entries</p><p class="tour-stat-value">4</p><div class="tour-stat-meta">This period</div></div>
+                  </div>
+                  <div class="tour-panel">
+                    <p class="tour-label" style="margin-bottom:8px">Usage report</p>
+                    <table class="tour-table">
+                      <thead><tr><th>Product</th><th class="num">Opening</th><th class="num">Purchased</th><th class="num">Closing</th><th class="num">Waste</th><th class="num">Usage</th></tr></thead>
+                      <tbody>
+                        <tr><td>Chicken breast</td><td class="num">42</td><td class="num">80</td><td class="num">36</td><td class="num">4</td><td class="num">82</td></tr>
+                        <tr><td>Olive oil</td><td class="num">8</td><td class="num">6</td><td class="num">7</td><td class="num">0</td><td class="num">7</td></tr>
+                        <tr><td>House red</td><td class="num">18</td><td class="num">12</td><td class="num">14</td><td class="num">1</td><td class="num">15</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="tour-grid-2">
+                    <div class="tour-panel">
+                      <p class="tour-label" style="margin-bottom:16px">Start inventory count</p>
+                      <div class="tour-form">
+                        <div class="tour-field"><label>Count date</label><input type="text" value="2026-08-13" readonly tabindex="-1"></div>
+                        <div class="tour-field"><label>From sheet</label><input type="text" value="Walk-in cooler" readonly tabindex="-1"></div>
+                      </div>
+                      <div style="margin-top:16px"><span class="tour-btn">Create draft count</span></div>
+                    </div>
+                    <div class="tour-panel">
+                      <p class="tour-label" style="margin-bottom:16px">Waste log</p>
+                      <div class="tour-form">
+                        <div class="tour-field"><label>Reason</label><input type="text" value="Spoilage" readonly tabindex="-1"></div>
+                        <div class="tour-field"><label>Product</label><input type="text" value="Chicken breast" readonly tabindex="-1"></div>
+                      </div>
+                      <div style="margin-top:16px"><span class="tour-btn">Log waste</span></div>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="tour-screen" data-screen="reports" aria-label="Reports">
+                  <div class="tour-pagehead">
+                    <div>
+                      <p class="tour-eyebrow">Insights</p>
+                      <h3 class="tour-title">Profit &amp; Loss</h3>
+                      <p class="tour-sub">2026 · Jan 1 to Dec 31</p>
+                    </div>
+                    <div class="tour-actions">
+                      <span class="tour-btn tour-btn-outline">Export CSV</span>
+                      <span class="tour-btn tour-btn-outline">Export PDF</span>
+                    </div>
+                  </div>
+                  <div class="tour-stats">
+                    <div class="tour-panel"><p class="tour-label">Total Revenue</p><p class="tour-stat-value">$412,840</p></div>
+                    <div class="tour-panel"><p class="tour-label">Prime Cost</p><p class="tour-stat-value">$239,447</p><div class="tour-stat-meta">58.0%</div></div>
+                    <div class="tour-panel"><p class="tour-label">Net Profit</p><p class="tour-stat-value tour-good">$61,926</p></div>
+                    <div class="tour-panel"><p class="tour-label">Net Margin</p><p class="tour-stat-value tour-good">15.0%</p></div>
+                  </div>
+                  <div class="tour-grid-2">
+                    <div class="tour-panel">
+                      <p class="tour-label" style="margin-bottom:8px">P&amp;L statement</p>
+                      <table class="tour-table">
+                        <tbody>
+                          <tr><td colspan="2" class="tour-eyebrow" style="padding-top:4px">Revenue</td></tr>
+                          <tr><td class="indent">Dine-In</td><td class="num">$247,704</td></tr>
+                          <tr><td class="indent">Takeout</td><td class="num">$82,568</td></tr>
+                          <tr><td class="emph">Total Revenue</td><td class="num emph">$412,840</td></tr>
+                          <tr><td colspan="2" class="tour-eyebrow">Cost of Goods Sold</td></tr>
+                          <tr><td class="indent">Food</td><td class="num">$98,200</td></tr>
+                          <tr><td class="indent">Beverages</td><td class="num">$33,909</td></tr>
+                          <tr><td class="emph">Total COGS</td><td class="num emph">$132,109</td></tr>
+                          <tr><td class="emph tour-good">Gross Profit</td><td class="num emph tour-good">$280,731</td></tr>
+                          <tr class="prime"><td>Prime Cost (COGS + Labor)</td><td class="num">$239,447</td></tr>
+                          <tr class="total"><td class="tour-good">Net Profit</td><td class="num tour-good">$61,926</td></tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="tour-panel">
+                      <p class="tour-label">Benchmarks</p>
+                      <div class="tour-ratio"><span class="tour-ratio-left"><span class="tour-dot" style="background:#15803d"></span>Prime cost</span><span class="tour-ratio-right tour-good">58.0% <span class="tour-ratio-bench">≤ 60%</span></span></div>
+                      <div class="tour-ratio"><span class="tour-ratio-left"><span class="tour-dot" style="background:#15803d"></span>Food &amp; beverage</span><span class="tour-ratio-right tour-good">32.0% <span class="tour-ratio-bench">≤ 35%</span></span></div>
+                      <div class="tour-ratio"><span class="tour-ratio-left"><span class="tour-dot" style="background:#15803d"></span>Labor</span><span class="tour-ratio-right tour-good">26.0% <span class="tour-ratio-bench">≤ 32%</span></span></div>
+                      <div class="tour-ratio"><span class="tour-ratio-left"><span class="tour-dot" style="background:#15803d"></span>Net margin</span><span class="tour-ratio-right tour-good">15.0%</span></div>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="tour-screen" data-screen="budgets" aria-label="Budgets">
+                  <div class="tour-pagehead">
+                    <div>
+                      <p class="tour-eyebrow">Insights</p>
+                      <h3 class="tour-title">Budgets</h3>
+                      <p class="tour-sub">Budget vs. actual for 2026</p>
+                    </div>
+                  </div>
+                  <div class="tour-stats tour-stats-3">
+                    <div class="tour-panel"><p class="tour-label">Revenue</p><p class="tour-stat-value">$412,840</p><div class="tour-stat-meta">2026</div></div>
+                    <div class="tour-panel"><p class="tour-label">Over budget</p><p class="tour-stat-value tour-good">0</p><div class="tour-stat-meta">3 budget rules</div></div>
+                    <div class="tour-panel"><p class="tour-label">Prime cost target</p><p class="tour-stat-value">60%</p><div class="tour-stat-meta">Actual 58.0%</div></div>
+                  </div>
+                  <div class="tour-panel" style="background:#f6fdf9">
+                    <p class="tour-label" style="margin-bottom:12px">Prime cost</p>
+                    <div class="tour-stats">
+                      <div><p class="tour-eyebrow">Target</p><p class="tour-stat-value" style="font-size:15px">60.0%</p></div>
+                      <div><p class="tour-eyebrow">Actual</p><p class="tour-stat-value tour-good" style="font-size:15px">58.0%</p></div>
+                      <div><p class="tour-eyebrow">Amount</p><p class="tour-stat-value" style="font-size:15px">$239,447</p></div>
+                      <div><p class="tour-eyebrow">Variance</p><p class="tour-stat-value tour-good" style="font-size:15px">−$8,257</p></div>
+                    </div>
+                  </div>
+                  <div class="tour-panel">
+                    <p class="tour-label" style="margin-bottom:8px">Budget vs. actual</p>
+                    <table class="tour-table">
+                      <thead><tr><th>Line</th><th>Rule</th><th class="num">Budget</th><th class="num">Actual</th><th class="num">Variance</th><th>Status</th></tr></thead>
+                      <tbody>
+                        <tr><td>Food<div class="tour-sub">Category</div></td><td>32% of sales</td><td class="num">$132,109</td><td class="num">$98,200</td><td class="num tour-good">−$33,909</td><td><span class="tour-badge tour-badge-good">On track</span></td></tr>
+                        <tr><td>Labor<div class="tour-sub">Cost group</div></td><td>28% of sales</td><td class="num">$115,595</td><td class="num">$107,338</td><td class="num tour-good">−$8,257</td><td><span class="tour-badge tour-badge-good">On track</span></td></tr>
+                        <tr><td>Occupancy<div class="tour-sub">Cost group</div></td><td>$5,200 / month</td><td class="num">$41,600</td><td class="num">$41,284</td><td class="num tour-good">−$316</td><td><span class="tour-badge tour-badge-good">On track</span></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+
+                <section class="tour-screen" data-screen="price-alerts" aria-label="Price Alerts">
+                  <div class="tour-pagehead">
+                    <div>
+                      <p class="tour-eyebrow">Insights</p>
+                      <h3 class="tour-title">Price Alerts</h3>
+                      <p class="tour-sub">Local price monitoring from your catalog and invoice history</p>
+                    </div>
+                  </div>
+                  <p class="tour-note">Alerts are based on prices you record manually in Products. Casacabe does not connect to suppliers or monitor prices automatically.</p>
+                  <div class="tour-stats tour-stats-3">
+                    <div class="tour-panel"><p class="tour-label">Active alerts</p><p class="tour-stat-value tour-warn">1</p><div class="tour-stat-meta">Right now</div></div>
+                    <div class="tour-panel"><p class="tour-label">Price movers</p><p class="tour-stat-value">3</p><div class="tour-stat-meta">Recent changes tracked</div></div>
+                    <div class="tour-panel"><p class="tour-label">Vendor spreads</p><p class="tour-stat-value">2</p><div class="tour-stat-meta">Same product, different vendor price</div></div>
+                  </div>
+                  <div class="tour-grid-2">
+                    <div class="tour-panel">
+                      <p class="tour-label">Global threshold</p>
+                      <p class="tour-sub" style="margin:8px 0 12px">Alert when a product's price rises by at least this % vs. the previous recorded price.</p>
+                      <div class="tour-form">
+                        <div class="tour-field"><label>Default % increase</label><input type="text" value="5" readonly tabindex="-1"></div>
+                      </div>
+                      <div style="margin-top:16px"><span class="tour-btn">Save default</span></div>
+                    </div>
+                    <div class="tour-panel">
+                      <p class="tour-label" style="margin-bottom:8px">Active alerts</p>
+                      <div class="tour-list">
+                        <div class="tour-list-row"><div><p>Olive oil</p><small>Was $11.20 · now $12.80 · +14%</small></div><span class="tour-badge tour-badge-bad">Price up</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="tour-screen" data-screen="calendar" aria-label="Calendar">
+                  <div class="tour-pagehead">
+                    <div>
+                      <p class="tour-eyebrow">Insights</p>
+                      <h3 class="tour-title">Calendar</h3>
+                      <p class="tour-sub">Browse your accounting year month by month</p>
+                    </div>
+                  </div>
+                  <p class="tour-note">Your accounting year runs January–December by default. Change the start month in Settings.</p>
+                  <div class="tour-tabs">
+                    <span class="tour-tab is-on">Full year</span>
+                    <span class="tour-tab">Q1</span>
+                    <span class="tour-tab">Q2</span>
+                    <span class="tour-tab">Q3</span>
+                    <span class="tour-tab">Q4</span>
+                  </div>
+                  <div class="tour-months">
+                    <div class="tour-month"><h4>January</h4><p class="yr">2026</p><div class="tour-month-row"><span>Revenue</span><strong>$46,200</strong></div><div class="tour-month-row"><span>Expenses</span><strong>$39,840</strong></div><div class="tour-month-row"><span>Net profit</span><strong class="tour-good">$6,360</strong></div></div>
+                    <div class="tour-month"><h4>February</h4><p class="yr">2026</p><div class="tour-month-row"><span>Revenue</span><strong>$48,110</strong></div><div class="tour-month-row"><span>Expenses</span><strong>$41,020</strong></div><div class="tour-month-row"><span>Net profit</span><strong class="tour-good">$7,090</strong></div></div>
+                    <div class="tour-month"><h4>March</h4><p class="yr">2026</p><div class="tour-month-row"><span>Revenue</span><strong>$51,400</strong></div><div class="tour-month-row"><span>Expenses</span><strong>$43,660</strong></div><div class="tour-month-row"><span>Net profit</span><strong class="tour-good">$7,740</strong></div></div>
+                    <div class="tour-month"><h4>April</h4><p class="yr">2026</p><div class="tour-month-row"><span>Revenue</span><strong>$52,880</strong></div><div class="tour-month-row"><span>Expenses</span><strong>$44,910</strong></div><div class="tour-month-row"><span>Net profit</span><strong class="tour-good">$7,970</strong></div></div>
+                    <div class="tour-month"><h4>May</h4><p class="yr">2026</p><div class="tour-month-row"><span>Revenue</span><strong>$55,840</strong></div><div class="tour-month-row"><span>Expenses</span><strong>$47,200</strong></div><div class="tour-month-row"><span>Net profit</span><strong class="tour-good">$8,640</strong></div></div>
+                    <div class="tour-month"><h4>June</h4><p class="yr">2026</p><div class="tour-month-row"><span>Revenue</span><strong>$58,940</strong></div><div class="tour-month-row"><span>Expenses</span><strong>$49,880</strong></div><div class="tour-month-row"><span>Net profit</span><strong class="tour-good">$9,060</strong></div></div>
+                    <div class="tour-month"><h4>July</h4><p class="yr">2026</p><div class="tour-month-row"><span>Revenue</span><strong>$45,270</strong></div><div class="tour-month-row"><span>Expenses</span><strong>$38,334</strong></div><div class="tour-month-row"><span>Net profit</span><strong class="tour-good">$6,936</strong></div></div>
+                    <div class="tour-month is-current"><div class="tour-panel-head"><div><h4>August</h4><p class="yr">2026</p></div><span class="tour-badge" style="background:#0e8a6b;color:#fff">Current</span></div><div class="tour-month-row"><span>Revenue</span><strong>$54,200</strong></div><div class="tour-month-row"><span>Expenses</span><strong>$46,070</strong></div><div class="tour-month-row"><span>Net profit</span><strong class="tour-good">$8,130</strong></div></div>
+                    <div class="tour-month"><h4>September</h4><p class="yr">2026</p><p class="tour-sub" style="margin-top:auto;padding-top:16px">No entries yet</p></div>
+                    <div class="tour-month"><h4>October</h4><p class="yr">2026</p><p class="tour-sub" style="margin-top:auto;padding-top:16px">No entries yet</p></div>
+                    <div class="tour-month"><h4>November</h4><p class="yr">2026</p><p class="tour-sub" style="margin-top:auto;padding-top:16px">No entries yet</p></div>
+                    <div class="tour-month"><h4>December</h4><p class="yr">2026</p><p class="tour-sub" style="margin-top:auto;padding-top:16px">No entries yet</p></div>
+                  </div>
+                </section>
+
+                <section class="tour-screen" data-screen="staff" aria-label="Staff">
+                  <div class="tour-pagehead">
+                    <div>
+                      <p class="tour-eyebrow">Team</p>
+                      <h3 class="tour-title">Staff</h3>
+                      <p class="tour-sub">Roster and labor cost for prime cost. Not payroll.</p>
+                    </div>
+                  </div>
+                  <div class="tour-stats tour-stats-3">
+                    <div class="tour-panel"><p class="tour-label">Active staff</p><p class="tour-stat-value">4</p><div class="tour-stat-meta">4 total</div></div>
+                    <div class="tour-panel"><p class="tour-label">Weekly labor cost</p><p class="tour-stat-value">$3,692</p><div class="tour-stat-meta">Scheduled / projected</div></div>
+                    <div class="tour-panel"><p class="tour-label">Monthly labor cost</p><p class="tour-stat-value">$16,000</p><div class="tour-stat-meta">$191,984 / year</div></div>
+                  </div>
+                  <div class="tour-panel">
+                    <p class="tour-label" style="margin-bottom:8px">Team members</p>
+                    <table class="tour-table">
+                      <thead><tr><th>Name</th><th>Role</th><th>Pay</th><th class="num">Weekly cost</th><th>Status</th></tr></thead>
+                      <tbody>
+                        <tr><td>Maya Chen</td><td>Manager</td><td>Salary · $62,400/yr</td><td class="num">$1,200</td><td><span class="tour-badge tour-badge-good">Active</span></td></tr>
+                        <tr><td>Luis Ortega</td><td>Chef</td><td>$28/hr · 45 hrs</td><td class="num">$1,260</td><td><span class="tour-badge tour-badge-good">Active</span></td></tr>
+                        <tr><td>Sam Ortiz</td><td>Line Cook</td><td>$18/hr · 40 hrs</td><td class="num">$720</td><td><span class="tour-badge tour-badge-good">Active</span></td></tr>
+                        <tr><td>Priya Shah</td><td>Server</td><td>$16/hr · 32 hrs</td><td class="num">$512</td><td><span class="tour-badge tour-badge-good">Active</span></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="tour-panel">
+                    <p class="tour-label" style="margin-bottom:16px">Add team member</p>
+                    <div class="tour-form">
+                      <div class="tour-field"><label>Name</label><input type="text" placeholder="Name" readonly tabindex="-1"></div>
+                      <div class="tour-field"><label>Role</label><input type="text" value="Server" readonly tabindex="-1"></div>
+                      <div class="tour-field"><label>Pay type</label><input type="text" value="Hourly" readonly tabindex="-1"></div>
+                      <div class="tour-field"><label>Hours / week</label><input type="text" placeholder="32" readonly tabindex="-1"></div>
+                    </div>
+                    <div style="margin-top:16px"><span class="tour-btn">Add team member</span></div>
+                  </div>
+                </section>
+
+                <section class="tour-screen" data-screen="settings" aria-label="Settings">
+                  <div class="tour-pagehead">
+                    <div>
+                      <p class="tour-eyebrow">Settings</p>
+                      <h3 class="tour-title">Settings</h3>
+                      <p class="tour-sub">Restaurant profile, accounting year, export and backup</p>
+                    </div>
+                    <span class="tour-btn">Save changes</span>
+                  </div>
+                  <div class="tour-panel">
+                    <p class="tour-label" style="margin-bottom:16px">Restaurant</p>
+                    <div class="tour-form">
+                      <div class="tour-field"><label>Restaurant name</label><input type="text" value="Taylors Corner" readonly tabindex="-1"></div>
+                      <div class="tour-field"><label>Owner name</label><input type="text" value="Taylor Reed" readonly tabindex="-1"></div>
+                      <div class="tour-field"><label>Address</label><input type="text" value="184 Market Street" readonly tabindex="-1"></div>
+                      <div class="tour-field"><label>Currency</label><input type="text" value="USD" readonly tabindex="-1"></div>
+                    </div>
+                  </div>
+                  <div class="tour-panel">
+                    <p class="tour-label" style="margin-bottom:16px">Targets</p>
+                    <div class="tour-form">
+                      <div class="tour-field"><label>Prime cost target (% of sales)</label><input type="text" value="60" readonly tabindex="-1"></div>
+                    </div>
+                    <p class="tour-sub" style="margin-top:8px">Full-service restaurants typically target 55–65% of sales.</p>
+                  </div>
+                  <div class="tour-panel">
+                    <p class="tour-label" style="margin-bottom:16px">Accounting year</p>
+                    <div class="tour-form">
+                      <div class="tour-field"><label>Year starts in</label><input type="text" value="January" readonly tabindex="-1"></div>
+                      <div class="tour-field"><label>Closed years</label><input type="text" value="None yet" readonly tabindex="-1"></div>
+                    </div>
+                  </div>
+                  <div class="tour-panel">
+                    <p class="tour-label" style="margin-bottom:8px">Data</p>
+                    <p class="tour-sub" style="margin-bottom:12px">Import CSV files from the Import page in the sidebar.</p>
+                    <div class="tour-actions">
+                      <span class="tour-btn tour-btn-outline">Export 2026</span>
+                      <span class="tour-btn tour-btn-outline">Create backup</span>
+                      <span class="tour-btn tour-btn-outline">Restore backup</span>
+                    </div>
+                  </div>
+                </section>
+
+              </div>
             </div>
           </div>
 
-          <div class="content-block reveal" style="margin-top: 40px;">
-            <h2>What each screen does</h2>
-            <p><strong>Dashboard</strong>: Your at-a-glance view: revenue, expenses, net profit, prime cost percentage, and alerts when numbers drift off target.</p>
-            <p><strong>Sales</strong>: Log revenue by channel. See monthly totals and where your money comes from.</p>
-            <p><strong>Expenses</strong>: Record costs by category. Track food and beverage as a share of sales.</p>
-            <p><strong>Invoices</strong>: Vendor bills with due dates. Know what you still owe.</p>
-            <p><strong>Reports</strong>: Profit and Loss for your accounting year. Export to CSV or PDF.</p>
-            <p><strong>Staff</strong>: Team members with roles and hourly rates. Project labor cost before payroll.</p>
-            <p><strong>Settings</strong>: Restaurant name, currency, prime cost target, accounting year.</p>
+          <div class="tour-captions content-block">
+            <div class="tour-caption is-active" data-screen="dashboard">
+              <h2>Dashboard</h2>
+              <p>Revenue, expenses, net profit, gross profit, prime cost %, cost ratios, revenue by channel, recent activity, and unpaid invoices. All update as you enter data.</p>
+            </div>
+            <div class="tour-caption" data-screen="sales">
+              <h2>Sales</h2>
+              <p>Log sales by channel (Dine-In, Takeout, Delivery, Catering, Bar, Other) with a monthly chart and year-to-date totals.</p>
+            </div>
+            <div class="tour-caption" data-screen="expenses">
+              <h2>Expenses</h2>
+              <p>Log expenses by category (COGS, labor, operations, occupancy) with a cost group breakdown and food &amp; beverage as a share of sales.</p>
+            </div>
+            <div class="tour-caption" data-screen="invoices">
+              <h2>Invoices</h2>
+              <p>Invoice builder with line items, sales tax, live preview, PDF export, and payment status tracking.</p>
+            </div>
+            <div class="tour-caption" data-screen="import">
+              <h2>Import</h2>
+              <p>CSV import for sales and expenses with downloadable templates. Optional folder watch for auto-import.</p>
+            </div>
+            <div class="tour-caption" data-screen="products">
+              <h2>Products</h2>
+              <p>Ingredient and supply catalog with units and price history. Used for food cost, purchasing, and price alerts.</p>
+            </div>
+            <div class="tour-caption" data-screen="vendors">
+              <h2>Vendors</h2>
+              <p>Supplier directory with contact info, payment terms, linked products, and invoice matching by name.</p>
+            </div>
+            <div class="tour-caption" data-screen="purchasing">
+              <h2>Purchasing</h2>
+              <p>Purchase orders from draft to sent to received. Prefill from a vendor order guide and optionally create an invoice on receipt.</p>
+            </div>
+            <div class="tour-caption" data-screen="inventory">
+              <h2>Inventory</h2>
+              <p>Count sheets, draft inventory counts, waste entries, and inventory value tracking with a usage report between counts.</p>
+            </div>
+            <div class="tour-caption" data-screen="reports">
+              <h2>Reports</h2>
+              <p>Full P&amp;L statement with revenue breakdown, COGS, labor, prime cost, net profit, net margin, and industry benchmarks. Export to CSV and PDF.</p>
+            </div>
+            <div class="tour-caption" data-screen="budgets">
+              <h2>Budgets</h2>
+              <p>Per-category budget rules as a fixed amount or % of sales. Variance vs actual, plus a prime cost target panel.</p>
+            </div>
+            <div class="tour-caption" data-screen="price-alerts">
+              <h2>Price Alerts</h2>
+              <p>Manual price monitoring from your product catalog. Set a threshold % and get alerted when a recorded price rises above it. Not automatic. Based on prices you log yourself.</p>
+            </div>
+            <div class="tour-caption" data-screen="calendar">
+              <h2>Calendar</h2>
+              <p>Accounting year overview by month and quarter. Export full year data. Close the year after December 31.</p>
+            </div>
+            <div class="tour-caption" data-screen="staff">
+              <h2>Staff</h2>
+              <p>Employee roster with roles, hourly or salary pay type, hours per week, and weekly and monthly labor cost projection. Used for prime cost tracking. Not payroll.</p>
+            </div>
+            <div class="tour-caption" data-screen="settings">
+              <h2>Settings</h2>
+              <p>Restaurant name, owner, address, currency, prime cost target, accounting year, export, backup, and restore. Settings lives at the bottom of the sidebar.</p>
+            </div>
           </div>
 
           <p style="margin-top: 24px; font-size: 14px; color: var(--text-secondary);">Want to evaluate before paying? Read <a href="try-before-you-buy.html">Try it before you buy</a> or see all <a href="../features.html">features</a>.</p>
@@ -105,6 +900,8 @@
           <p class="footer-tagline">Desktop restaurant backoffice for independent owners.</p>
         </div>
         <nav class="footer-links footer-links-center" aria-label="Footer">
+          <a href="../product/app-tour.html">App tour</a>
+          <span class="footer-sep">·</span>
           <a href="../features.html">Features</a>
           <span class="footer-sep">·</span>
           <a href="../how-it-works.html">How it works</a>

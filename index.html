@@ -46,15 +46,7 @@
         <span>Casacabe</span>
       </a>
       <div class="nav-items">
-        <div class="nav-dropdown nav-keep">
-          <span class="nav-dropdown-trigger" tabindex="0">Product <span class="nav-dropdown-caret">▾</span></span>
-          <div class="nav-dropdown-menu" role="menu">
-            <a href="product/try-before-you-buy.html" role="menuitem">Try it before you buy</a>
-            <a href="product/app-tour.html" role="menuitem">App tour</a>
-            <a href="product/overview.html" role="menuitem">Overview</a>
-            <a href="product/requirements.html" role="menuitem">System requirements</a>
-          </div>
-        </div>
+        <a href="product/app-tour.html" class="nav-keep">App tour</a>
         <a href="features.html" class="nav-keep">Features</a>
         <a href="how-it-works.html" class="nav-keep">How it works</a>
         <a href="about.html" class="nav-keep">About</a>
@@ -69,11 +61,19 @@
     <section class="home-hero">
       <div class="container home-hero-inner">
         <p class="hero-eyebrow">Restaurant back office for independent owners</p>
+        <div class="home-palette" aria-hidden="true">
+          <span class="home-swatch home-swatch-emerald"></span>
+          <span class="home-swatch home-swatch-gold"></span>
+          <span class="home-swatch home-swatch-terra"></span>
+          <span class="home-swatch home-swatch-blue"></span>
+          <span class="home-swatch home-swatch-sage"></span>
+          <span class="home-swatch home-swatch-clay"></span>
+        </div>
         <h1 class="hero-headline">Your restaurant. Your numbers. Finally in one place.</h1>
-        <p class="hero-subheadline">Casacabe runs on your Mac or PC. Your data never leaves your computer.</p>
+        <p class="hero-subheadline">Casacabe runs on your Mac or PC. Your data never leaves your computer. Pay once — no subscription, no upsells.</p>
         <div class="hero-actions">
-          <a href="https://buy.stripe.com/00w00c04Ee2j4gI1L05ZC02" class="btn btn-primary">Buy Casacabe $199</a>
-          <a href="features.html" class="btn btn-outline">See Features</a>
+          <a href="product/app-tour.html" class="btn btn-primary">See the app</a>
+          <a href="pricing.html" class="btn btn-outline">Pricing</a>
         </div>
         <div class="home-hero-showcase">
           <div class="home-hero-visual ui-float" aria-hidden="true">
@@ -170,12 +170,15 @@
         <div class="home-problem-layout">
           <div class="home-problem-grid">
             <article class="home-problem-card">
+              <span class="problem-kicker">01 · Monday mornings</span>
               <p>You copy numbers from Toast into QuickBooks every Monday morning.</p>
             </article>
             <article class="home-problem-card">
+              <span class="problem-kicker">02 · The real question</span>
               <p>You have no idea if last month was actually profitable.</p>
             </article>
             <article class="home-problem-card">
+              <span class="problem-kicker">03 · Stacked fees</span>
               <p>You pay over $500 a month for software that still does not talk to each other.</p>
             </article>
           </div>
@@ -191,6 +194,30 @@
               <p class="problem-chart-caption">Numbers scattered across tools. No single source of truth.</p>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-promise reveal">
+      <div class="container">
+        <h2 class="home-section-headline">Built to be trusted, not chased</h2>
+        <div class="home-promise-grid">
+          <article class="home-promise-card">
+            <h3>Pay once</h3>
+            <p>$199. Mac and Windows. No monthly fee, no “founding price” that expires next week.</p>
+          </article>
+          <article class="home-promise-card">
+            <h3>Your computer</h3>
+            <p>Numbers stay on your Mac or PC. We do not host your books in our cloud.</p>
+          </article>
+          <article class="home-promise-card">
+            <h3>See it first</h3>
+            <p>Walk every screen in the app tour before you spend a dollar. Same layout you install.</p>
+          </article>
+          <article class="home-promise-card">
+            <h3>Honest limits</h3>
+            <p>No Toast sync. No payroll filing. We say that up front so you are not surprised later.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -299,8 +326,12 @@
         <span class="cta-blob cta-blob-3"></span>
       </div>
       <div class="container home-cta-inner">
-        <h2 class="home-section-headline">Ready to get started?</h2>
-        <a href="pricing.html" class="btn btn-primary">See Pricing</a>
+        <h2 class="home-section-headline">Ready when you are</h2>
+        <p class="home-cta-note">Look around first. Buy when it fits how you already run the restaurant.</p>
+        <div class="home-cta-actions">
+          <a href="product/app-tour.html" class="btn btn-primary">Take the app tour</a>
+          <a href="pricing.html" class="btn btn-outline">See pricing</a>
+        </div>
       </div>
     </section>
   </main>
@@ -313,6 +344,8 @@
           <p class="footer-tagline">Desktop restaurant backoffice for independent owners.</p>
         </div>
         <nav class="footer-links footer-links-center" aria-label="Footer">
+          <a href="product/app-tour.html">App tour</a>
+          <span class="footer-sep">·</span>
           <a href="features.html">Features</a>
           <span class="footer-sep">·</span>
           <a href="how-it-works.html">How it works</a>
